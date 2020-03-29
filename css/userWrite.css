@@ -1,0 +1,234 @@
+/* 글씨체 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+
+    font-family: 'NanumSquare';
+}
+
+/* top bar */
+.topContainer {
+    box-sizing: border-box;
+    padding-top: 5vh;
+    z-index: 2;
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 14.04vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    background-color: white;
+}
+
+.back {
+    position: absolute;
+    left: 0;
+}
+
+.back_arrow {
+    width: 15.47vw;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.complete {
+    font-weight: 700;
+    width: 15.47vw;
+    height: 4.43vh;
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+    color:#0a74d8;
+}
+
+/* photo */
+.photo{
+    margin-top:14.04vh;
+    width: 100vw;
+    height: 100vw;
+    background-color: #F0F0F0;
+    background-image: url(./activity/upload_camera.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 150px;
+}
+
+/* 상황선택 */
+.hashImg{
+    width: 91.46vw;
+    position: absolute;
+    top:0;
+}
+
+.centerBox{
+    margin-top: 2.8vh;
+    margin-bottom: 1vh;
+    width: 91.46vw;
+    height: 5.4vh;
+    position: relative;
+}
+
+.hashText{
+    padding-bottom: 1vh;
+    color:black;
+    font-weight: 700;
+    font-size: 14px;
+    z-index: 1;
+}
+
+.blank{
+    color:#C4C4C4;
+}
+
+.inputContainer{
+    margin: 0 5vw 2vh 5vw;
+    width: 90vw;
+    height: 40vh;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding : 2vh 5vw;
+    box-sizing: border-box;
+}
+
+.userTitle{
+    background-color: rgba(0,0,0,0);
+    border:none;
+    border-bottom: 1px solid #B8b8b8;
+    line-height: 200%;
+    width: 80vw;
+}
+
+.userContent{
+    background-color: rgba(0,0,0,0);
+    width: 80vw;
+    line-height: 150%;
+    height: 30vh;
+    border:none;
+    padding:1vh 0;
+    font-family:'NanumSquare';
+}
+
+.userTitle:focus{
+    outline: none;
+}
+
+.userContent:focus{
+    outline: none;
+}
+
+/* 팝업 */
+.popContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+.popConfirmBox{
+    background-color: white;
+    position: relative;
+    width: 91.47vw;
+    border-radius: 10px;
+    z-index: 3;
+    opacity: 1;
+    height: 24.63vh;
+}
+
+.popButton2{
+    background-color: #0A74D8;
+    border-radius: 0 0 10px 10px;
+    height: 7.39vh;
+    color:white;
+}
+
+.popTitle{
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    font-size: 18px;
+    border-bottom:2px solid #F7F7F7;
+    height:17.73vh;
+}
+
+#yes3{
+    color:white;
+    width: 50%;
+    height: 100%;
+    background-color:#0A74D8;
+    border-radius: 0 0 10px 0;
+}
+
+/*선택팝업*/
+#inst {
+    border-bottom: 2px solid #F7F7F7;
+    font-weight: 700;
+}
+
+.contentLine {
+    height: 6vh;
+    border-bottom: 1px solid #F7F7F7;
+    display: flex;
+    align-items: center;
+}
+
+
+.circle {
+    width: 19px;
+    height: 19px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid #c8c8c8;
+    display: inline-block;
+    margin-left: 9.1vw;
+}
+
+.circle.selected {
+    border: 6px solid #0A74D8;
+    box-sizing: border-box;
+}
+
+.content {
+    font-family: 'NanumSquare';
+    display: inline-block;
+    padding-left: 7.2vw;
+}
+
+.popChoiceBox {
+    width: 91.47vw;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.popTitle2 {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    border-bottom: 2px solid #F7F7F7;
+    height: 8.62vh;
+}
+
+.popButton {
+    color: white;
+    background-color: #0A74D8;
+    height: 7.39vh;
+    border-radius: 0 0 10px 10px;
+}

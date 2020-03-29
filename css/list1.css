@@ -1,0 +1,171 @@
+.topBox{
+    margin-top:14.04vh;
+    height: 3.69vh;
+    box-sizing: border-box;
+    width: 100vw;
+    display: flex;
+    padding: 0 4.2vW;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.09vh;
+}
+
+.leftBox{
+    height: 3.69vh;
+    display: flex;
+    align-items: center;
+}
+
+.condition{
+    background-color:#0a74d8;
+    height: 3.69vh;
+    padding: 0 3.5vw;
+    color: white;
+    border-radius: 32px;
+    margin-right:1.07vw;
+    font-size: 14px;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+.conditionNum{
+    color:#0a74d8;
+    font-weight: 700;
+}
+
+
+.rightBox{
+    height: 3.69vh;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size:14px;
+}
+
+
+.orderImg{
+    width: 9.07vw;
+    display: flex;
+    align-items: center;
+}
+
+/* 리스트 */
+
+.listContainer0{
+    padding: 0 4.27vw;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+.list:nth-child(even){
+    margin-left: 3.46vw;
+}
+
+.list{
+    margin-bottom: 5.05vh;
+    position: relative;
+}
+
+.listImg{
+    border-radius: 10px;
+    width: 44vw;
+    height: 19.33vh;
+    background-image: url(./activity/editor1.png);
+    background-position: center center;
+    background-size: cover;
+}
+
+.condition2{
+    font-size: 10px;
+    color: #0a74d8;
+    margin-top: 10px;
+}
+
+.aTitle{
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.nTitle{
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* 유저리스트 */
+.Title{
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.animalIcon{
+    width: 8.33vw;
+    margin-left: -1vw;
+}
+
+.infoContents{
+    display: flex;
+    align-items: center;
+    color:#c4c4c4;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.listImg2{
+    border-radius: 10px;
+    width: 44vw;
+    height: 19.33vh;
+    background-image: url(./activity/userpick4.png);
+    background-position: center center;
+    background-size: cover;
+}
+
+/* 팝업 */
+
+.popContainer0 {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.whiteBox {
+    border-radius: 10px;
+    background-color: white;
+    width: 91.46vw;
+}
+
+.headLine {
+    padding: 2.5vh 0 2.5vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.headLine:last-child{
+    border:none
+}
+
+.headLine>img{
+    height: 25px;
+    margin-right:5.07vw;
+    margin-left: 32.53vw;
+}
+.bookBox{
+    display: flex;
+    align-items: center;
+    color: white;
+    position: absolute;
+    font-weight: 700;
+    font-size: 10px;
+    top:1.11vh;
+    right:2.4vw;
+}
+.bookBox>img{
+    height: 11px;
+}

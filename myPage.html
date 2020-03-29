@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MayDay</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/topNham.css'>
+    <link rel='stylesheet' href='./css/myPage.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/hamburger.js"></script>
+</head>
+
+<body>
+    <div class="topContainer center">
+        <div class="back"><img src="./css/white_back.png" alt="" class="back_arrow"></div>
+        <div class="title2 center">마이 페이지</div>
+        <img class='hamburger topRight' src="./css/hamburger_icon.png">
+    </div>
+
+    <div class="animalBox nanumB16">
+        <img src="./css/myPage_img/gorae.png" alt="" class="animal">
+        <div class="infoText">@<span id="id">ideepr</span></div>
+
+        <div class="hamInfoBox2">
+            <div class="hamBox hamBox1">
+                <div>내가 쓴 편지</div>
+                <div class="infoNum" id="myWrite">47</div>
+            </div>
+            <div class="hamBox hamBox2">
+                <div>내가 쓴 답장</div>
+                <div class="infoNum" id="myReple">60</div>
+            </div>
+            <div class="hamBox hamBox3">
+                <div>내 활동 추천</div>
+                <div class="infoNum" id="myAct">10</div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="titleText nanumB18">내 정보<img src="./css/myPage_img/mypage_edit.png" class="edit"></div>
+    <div class="infoBox">
+        <div class="infoLine">
+            <div class="title nanumB16">아이디</div>
+            <div class="text" id="email">example@example.com</div>
+        </div>
+        <div class="infoLine">
+            <div class="title nanumB16">레벨</div>
+            <div class="text" id="level">고래</div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="infoLine">
+            <div class="title nanumB16">직종</div>
+            <div class="text" id="category">의료</div>
+        </div>
+        <div class="infoLine">
+            <div class="title nanumB16">연차</div>
+            <div class="text" id="year">1년차</div>
+        </div>
+        <div class="infoLine">
+            <div class="title nanumB16">나이대</div>
+            <div class="text" id="age">20대</div>
+        </div>
+    </div>
+
+    <div class="logOut nanumB16">로그아웃</div>
+
+    <div class="popContainer popContainer_animal center">
+        <div class="whiteBox">
+
+            <div class="headLine center">@<span id="id">ideeper</span>님의 레벨 <img
+                    src="./css/myPage_img/mypage_close_black.png" alt="" class="close"></div>
+            <div class="nick center">"<span id="nickname">고래</span>"</div>
+            <div class="popAnimalBox center">
+                <img src="./css/myPage_img/gorae.png" alt="" class="popAnimal">
+            </div>
+
+            <div class="center">
+                <div class="innerProg">
+                    <div class="outerProg"></div>
+                </div>
+            </div>
+
+            <div class="center nextInfo">다음 레벨까지&nbsp<span id="rest"> 280</span>점이 더 필요해요</div>
+            <div class="line2"></div>
+            <div class="center inst"><img src="./css/myPage_img/mypage_level_std.png" alt="" class="instruction"></div>
+        </div>
+    </div>
+
+</body>
+
+
+<script>
+    $(document).ready(function () {
+
+        // popup없애놓기
+        $('.popContainer').hide();
+
+        // 레벨정보
+        $('img.animal').on('click', function () {
+
+            $('.popContainer_animal').show();
+
+            $('.close').on('click', function () {
+                $('.popContainer').hide();
+            });
+
+        });
+
+
+        //수정
+        $('.edit').on('click', function () {
+
+            $('.popContainer').hide();
+            location.href = './edit.html'
+        });
+
+        //로그아웃
+        $('.logOut').on('click', function () {
+
+            $('.popContainer').hide();
+            location.href = './login.html'
+        });
+
+        //내가 쓴 편지
+        $('.hamBox1').on('click', function () {
+            $('.popContainer').hide();
+            location.href = './myLetters.html'
+        });
+
+        //내가 쓴 답장
+        $('.hamBox2').on('click', function () {
+            $('.popContainer').hide();
+            location.href = './fromMe.html'
+        });
+
+        //내가 쓴 활동추천
+        $('.hamBox3').on('click', function () {
+            $('.popContainer').hide();
+            location.href = './myActivity.html'
+        });
+
+    });
+</script>

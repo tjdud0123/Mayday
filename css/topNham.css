@@ -1,0 +1,179 @@
+/* 글씨체 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+body{
+    font-family: 'NanumSquare';
+}
+/* top bar */
+.topContainer {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 14.04vh;
+    box-sizing: border-box;
+    /* padding-top:5vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-family: 'NanumSquare';
+    font-size: 18px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.back {
+    position: absolute;
+    left: 0;
+}
+
+.back>img {
+    width: 15.47vw;
+}
+
+.title {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    color: black;
+}
+
+img.search{
+    height:4.43vh;
+}
+
+img.hamburger{
+    width: 15.47vw;
+}
+
+.topRight{
+    right:0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+
+/*--------------------- 햄버거 --------------------*/
+.pophamber {
+    position: fixed;
+
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 20;
+}
+
+.hamburgerBox{
+    position: fixed;
+    width: 74.8vw;
+    height: 100vh;
+    z-index: 6;
+    right:0;
+    top:0;
+}
+
+.hamInfo{
+    background-color: #0A74D8;
+    height:auto;
+}
+
+.iconBox{
+    padding-top: 6.53vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamIcon{
+    width: 12.27vw;
+    display:inline-block;
+}
+
+.inline{
+    display:inline-block;
+}
+
+.hamIcon3{
+    width: 15.47vw;
+    justify-items: flex-end;
+}
+
+.rightIcon{
+    justify-items: flex-end;
+}
+
+.welcomeText{
+    padding-top: 4.56vh;
+    padding-left:5.07vw;
+    color: white;
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 160%;
+}
+
+.hamInfoBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5.91vh 7.2vw 4vh 7.2vw;
+}
+
+.hamBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+    font-family: 'NanumSquare';
+    box-sizing: border-box;
+}
+
+.hamBox > .infoNum{
+    padding-top:1.6vh;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.hamSelect{
+    background-color: white;
+    height: 61.21vh;
+}
+
+.hamMsgBox{
+    padding: 3.94vh 0 2.96vh 6.67vw;
+    font-family: 'NanumSquare';
+}
+
+.MsTitle{
+    display: flex;
+    align-items: center;
+    padding-bottom: 3.45vh;
+    font-weight: 800;
+}
+
+.blueIcon{
+    width: 4.8vw;
+    margin-right: 5.87vw;
+}
+
+.selectMenu{
+    padding: 0  0 3.45vh 13.33vw;
+    font-weight: 400;
+}
+
+.hamActBox{
+    padding-left: 6.67vw;
+}

@@ -1,0 +1,378 @@
+/* 글씨체 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-image: url(./letter/letter_back.png);
+    background-size: 100vw 100vh;
+    background-position: top left;
+    font-family: 'NanumSquare';
+}
+/* top bar */
+.topContainer {
+    z-index: 2;
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 14.04vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.back {
+    position: absolute;
+    left: 0;
+}
+
+.back_arrow {
+    width: 15.47vw;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.complete {
+    font-weight: 700;
+    width: 15.47vw;
+    height: 4.43vh;
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+}
+
+/* 카드 */
+
+.card{
+    position: relative;
+    margin-top:14.04vh;
+    width: 100vw;
+    height: 42.33vh;
+}
+
+.cardImg{
+    width: 91.46vw;
+    height: 42.33vh;
+}
+
+.letterDown{
+    position: absolute;
+
+}
+
+.textField{
+    width: 75.46vw;
+    height: 27.83vh;
+    position: absolute;
+    line-height: 4.1vh;
+    top: 5.5vh;
+    font-size:14px;
+    box-sizing: border-box;
+    /* margin-bottom:6.2vh; */
+    overflow: auto;
+}
+
+.hashImg{
+    width: 91.46vw;
+    /* position: absolute;
+    top:0; */
+}
+
+.hashImg2{
+    width: 83.46vw;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.centerBox{
+    /* margin-top: 2.8vh;
+    margin-bottom: 1vh; */
+    width: 91.46vw;
+    height: 7vh;
+    position: relative;
+}
+
+.hashText{
+    /* padding-bottom: 1vh; */
+    color:#0A74D8;
+    font-weight: 700;
+    font-size: 14px;
+    z-index: 2;
+    position: absolute;
+}
+
+
+
+.letterDown{
+    position: absolute;
+    bottom:3.83vh;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 12px;
+    width: 75.46vw;
+    align-items: center;
+}
+img.emotion1{
+    height: 3.19vh;
+    margin-right: 4.8vw;;
+}
+img.emotion2{
+    height: 3.19vh;
+    margin-right: 1.07;
+}
+
+.downRight{
+    color: #a4a4a4;
+    font-size: 12px;
+}
+
+/* 답장 */
+
+.reply{
+    position: relative;
+    margin-top: 1vh;
+}
+
+.reply2{
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: 4vw;
+    overflow-wrap: normal;
+}
+
+.replyCard{
+    width: 91.46vw; 
+    height: 27.46vh;  
+}
+
+.replyCard2{
+    width: 85.06vw; 
+    height: 27.46vh;  
+}
+
+.replyField{
+    position: absolute;
+    width: 77.2vw;
+    height: 18vh;
+    overflow: auto;
+    font-size: 14px;
+    line-height: 4.7vh;
+    top:2.7vh;
+}
+
+.replyField2{
+    white-space: normal;
+    overflow-y: auto;
+    position: absolute;
+    width: 73.2vw;
+    height: 16vh;
+    font-size: 14px;
+    line-height: 4.7vh;
+    top:2.7vh;
+    left:7vw;
+}
+
+.cardItem{
+    position: relative;
+    width: 85.06vw;
+    display: inline-block;
+}
+
+
+.rePlyDown{
+    position: absolute;
+    bottom:4vh;
+    right:11.07vw;
+    font-size: 12px;
+}
+
+
+.likeBox{
+    font-size: 14px;
+    color:#0A74D8;
+}
+
+.like{
+    width: 3.07vh;
+    margin-right: 2vw;
+}
+
+textarea.replyField{
+    background-color: rgba(0,0,0,0);
+    border:none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+textarea::placeholder {
+    color: #A4A4A4;
+}
+
+.blank{
+    color: #A4A4A4;
+}
+
+/*팝업 화면*/
+.popContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+.popConfirmBox{
+    background-color: white;
+    position: relative;
+    width: 91.47vw;
+    border-radius: 10px;
+    z-index: 3;
+    opacity: 1;
+    height: 24.63vh;
+}
+
+
+.popButton{
+    color: #0A74D8;
+    background-color: white;
+    height: 7.39vh;
+    border-top: 1px solid  #0A74D8;
+    border-radius: 0 0 10px 10px;
+}
+
+.popButton2{
+    background-color: #0A74D8;
+    border-radius: 0 0 10px 10px;
+    height: 7.39vh;
+    color:white;
+}
+
+.popTitle{
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    font-size: 18px;
+    border-bottom:2px solid #F7F7F7;
+    height:17.73vh;
+}
+
+#no1, #no2{
+    color: #0A74D8;
+    width: 50%;
+    height: 100%;
+}
+
+#yes1{
+    color:white;
+    width: 50%;
+    height: 100%;
+    background-color:#0A74D8;
+    border-radius: 0 0 10px 0;
+}
+
+/*확인 창*/
+.completeBox{
+    display: none;
+    color:white;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./letter/send_back.png);
+    background-size: 100vw 100vh;
+    background-position: center center;
+    z-index: 5;
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.completeText{
+    padding:74.47vh 0 6.53vh 0;
+    font-size: 18px;
+}
+.aBox{
+    width: 25.33vw;
+    height: 6.4vh;
+}
+a, a:visited{
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+}
+
+.center2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 150%;
+}
+
+.popChoiceBox {
+    width: 91.47vw;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.popTitle2 {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    border-bottom: 2px solid #F7F7F7;
+    height: 8.62vh;
+}
+
+
+.contentLine {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+
+.popContent {
+    padding:2.59vh 0;
+}
+
+
+.content {
+    font-family: 'NanumSquare';
+    margin-left: 7.2vw;
+    padding: 1vh 3.2vw;
+    border-radius: 32px;
+    border: 1px solid #0A74D8;
+    color: #0A74D8;
+    background-color: white;
+}
+
+.tagSelected{
+    color: white;
+    background-color: #0A74D8;
+}
+
+/* .popButton {
+    color: white;
+    background-color: #0A74D8;
+    height: 7.39vh;
+    border-radius: 0 0 10px 10px;
+
+} */

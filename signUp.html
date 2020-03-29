@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MayDay</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/signUp.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="topContainer center">
+        <div class="back"><img src="./css/back.png" alt=""></div>
+        <div class="title center">회원가입</div>
+        <div class="complete center">완료</div>
+    </div>
+
+    <div class="infoContainer center">
+        <div class="infoBox1">
+            <div class="infoTitle">아이디</div>
+            <input class="infoInput infoInput1" placeholder="example@example.com" type="text"></input>
+            <div class="idAlert"> * 이메일 형식이 아닙니다</div>
+        </div>
+        <div class="infoBox1">
+            <div class="infoTitle">패스워드</div>
+            <input class="infoInput infoInput2 passInput" placeholder="비밀번호를 입력해주세요" type="password"></input>
+        </div>
+        <div class="infoBox1">
+            <div class="infoTitle">패스워드 확인</div>
+            <input class="infoInput infoInput3 passInput" placeholder="비밀번호를 한번 더 입력해주세요" type="password"></input>
+            <div class="passwordAlert">* 비밀번호가 다릅니다</div>
+        </div>
+        <div class="infoBox2">
+            <div class="infoTitle">직종</div>
+            <div class="selectBox" id="category">선택<img src="./css/signUp_img/drop_down.png" alt=""></div>
+        </div>
+        <div class="infoBox2">
+            <div class="infoTitle">나이대</div>
+            <div class="selectBox" id="age">선택<img src="./css/signUp_img/drop_down.png" alt=""></div>
+        </div>
+        <div class="infoBox2">
+            <div class="infoTitle">연차</div>
+            <div class="selectBox" id="year">선택<img src="./css/signUp_img/drop_down.png" alt=""></div>
+        </div>
+    </div>
+
+
+    <!-- 팝업창 -->
+    <div class="popContainer popContainer1 center">
+        <div class="popConfirmBox">
+            <div class="popTitle center" id="isId">사용할 수 있는 아이디입니다.</div>
+            <div class="popButton center" id="yes1">확인</div>
+        </div>
+    </div>
+
+    <div class="popContainer popContainer2 center">
+        <div class="popChoiceBox">
+            <div class="popTitle center" id="inst">직종을 선택해 주세요</div>
+            <div class="popContent">
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1 selected"></div>
+                    <div class="content">경영 사무</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">연구개발 설계</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">마케팅 광고 홍보</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">생산 제조</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">IT 인터넷</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">교육</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">디자인</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">건설</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">무역 유통</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">의료</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">영업 고객상담</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">서비스</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">전문 특수직</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">미디어</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">기타</div>
+                </div>
+            </div>
+            <div class="popButton center" id="yes2">확인</div>
+        </div>
+    </div>
+
+    <div class="popContainer popContainer3 center">
+        <div class="popChoiceBox">
+            <div class="popTitle center" id="inst">나이를 선택해 주세요</div>
+            <div class="popContent">
+                <div class="contentLine contentLine2">
+                    <div class="circle circle2 selected"></div>
+                    <div class="content">20-24세</div>
+                </div>
+                <div class="contentLine contentLine2">
+                    <div class="circle circle2"></div>
+                    <div class="content">25-29세</div>
+                </div>
+                <div class="contentLine contentLine2">
+                    <div class="circle circle2"></div>
+                    <div class="content">30-34세</div>
+                </div>
+                <div class="contentLine contentLine2">
+                    <div class="circle circle2"></div>
+                    <div class="content">35-39세</div>
+                </div>
+                <div class="contentLine contentLine2">
+                    <div class="circle circle2"></div>
+                    <div class="content">40세 이상</div>
+                </div>
+                <div class="contentLine contentLine2">
+                    <div class="circle circle2"></div>
+                    <div class="content">50세 이상</div>
+                </div>
+
+            </div>
+            <div class="popButton center" id="yes3">확인</div>
+        </div>
+    </div>
+
+    <div class="popContainer popContainer4 center">
+        <div class="popChoiceBox">
+            <div class="popTitle center" id="inst">연차를 선택해 주세요</div>
+            <div class="popContent">
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3 selected"></div>
+                    <div class="content">1년 이하</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">1-2년</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">2-3년</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">3-5년</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">5-7년</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">7-10년</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">10년 이상</div>
+                </div>
+
+            </div>
+            <div class="popButton center" id="yes4">확인</div>
+        </div>
+    </div>
+
+    <div class="popContainer popContainer5 center">
+        <div class="popConfirmBox">
+            <div class="popTitle center" id="isId">회원가입이 완료되었습니다.</div>
+            <div class="popButton center" id="yes5">확인</div>
+        </div>
+    </div>
+
+    <div class="popContainer popContainer6 center">
+        <div class="popConfirmBox">
+            <div class="popTitle center" id="isId">모든 내용을 입력해주세요</div>
+            <div class="popButton center" id="yes6">확인</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    setInterval(function () {
+        let viewheight = $(window).height();
+        let viewwidth = $(window).width();
+        let viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth +
+            "px, initial-scale=1.0");
+    }, 100);
+
+
+    $(document).ready(function () {
+        let id;
+        let passWord;
+        let okPass = false;
+        let okId = false;
+        // popup없애놓기
+        $('.popContainer').hide();
+
+        //아이디확인
+        $(".infoInput1").keyup(function () {
+            id = $(this).val();
+            if (id.includes(".com") && id.includes("@")) {
+                $('.idAlert').css('color', 'green');
+                $('.idAlert').text('* 사용가능한 아이디입니다');
+                okId = true;
+            } else {
+                $('.idAlert').css('color', 'red');
+                $('.idAlert').text('* 이메일 형식이 아닙니다');
+                okId = false;
+            }
+            $('.idAlert').css('visibility', 'visible')
+        });
+
+        //패스워드확인
+        $(".passInput").keyup(function () {
+            passWord = $(".infoInput2").val();
+            if (passWord) {
+                if ($('.infoInput3').val() == $(".infoInput2").val()) {
+                    $('.passwordAlert').css('color', 'green');
+                    $('.passwordAlert').text('* 비밀번호가 일치합니다');
+                    okPass = true;
+                } else {
+                    $('.passwordAlert').css('color', 'red');
+                    $('.passwordAlert').text('* 비밀번호가 다릅니다');
+                    okPass = false;
+                }
+                $('.passwordAlert').css('visibility', 'visible')
+            } else {
+                $('.passwordAlert').css('visibility', 'hidden')
+            }
+
+        });
+
+
+
+        // //뒤로가기
+        // $('.back').on('click', function () {
+        //     console.log('뒤로가기')
+        //     location.href = './login.html'
+        // });
+
+        let category;
+        let age;
+        let year;
+        //직종선택
+        $('#category').on('click', function () {
+            console.log('직종선택')
+            $('.popContainer2').show();
+
+            $('.contentLine1').on('click', function () {
+
+                let isSelected = $(this).children(':first').hasClass("selected")
+
+                if (!isSelected) {
+                    $('.circle1').removeClass('selected')
+                    $(this).children(':first').addClass('selected')
+                    category = $(this).children(':last').text()
+                    console.log(category)
+                }
+
+                $('#yes2').on('click', function () {
+                    $('.popContainer2').hide();
+                    $('#category').text(category);
+                });
+            });
+        });
+
+        //나이선택
+        $('#age').on('click', function () {
+            console.log('나이선택')
+
+            $('.popContainer3').show();
+
+            $('.contentLine2').on('click', function () {
+
+                let isSelected = $(this).children(':first').hasClass("selected")
+
+                if (!isSelected) {
+                    console.log('>>>>', $(this).children(':first'))
+                    $('.circle2').removeClass('selected')
+                    $(this).children(':first').addClass('selected')
+                    age = $(this).children(':last').text()
+                    console.log(age)
+                }
+
+            });
+
+            $('#yes3').on('click', function () {
+                $('.popContainer3').hide();
+                $('#age').text(age);
+            });
+
+        });
+
+
+
+
+        //연차선택
+        $('#year').on('click', function () {
+            console.log('연차선택')
+            $('.popContainer4').show();
+
+            $('.contentLine3').on('click', function () {
+
+                let isSelected = $(this).children(':first').hasClass("selected")
+                if (!isSelected) {
+                    console.log('>>>', $('.circle3'))
+                    $('.circle3').removeClass('selected')
+                    $(this).children(':first').addClass('selected')
+                    year = $(this).children(':last').text()
+                    console.log(year)
+                }
+
+            });
+
+            $('#yes4').on('click', function () {
+                $('.popContainer4').hide();
+                $('#year').text(year);
+            });
+
+        });
+
+
+
+        //완료
+        $('.complete').on('click', function () {
+            console.log(okPass, okId)
+            if (okPass && okId && category && year && age) {
+                $('.popContainer5').show();
+                $('#yes5').on('click', function () {
+                    $('.popContainer').hide();
+                    location.href = './login.html'
+                });
+            } else if (okPass && okId) {
+                $('.popContainer6').show();
+                $('#yes6').on('click', function () {
+                    $('.popContainer').hide();
+                });
+            }
+
+
+        });
+
+
+
+
+    });
+</script>

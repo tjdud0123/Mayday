@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>MayDay</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/topNham.css'>
+    <link rel='stylesheet' href='./css/list1.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/hamburger.js"></script>
+</head>
+
+<body>
+    <!-- 상단바 -->
+    <div class="topContainer center">
+        <div class="back"><img src="./css/back.png" alt="" class="back_arrow"></div>
+        <div class="title center">누군가의 구조활동</div>
+        <img class='hamburger topRight' src="./css/hamburger_blk.png">
+    </div>
+
+    <!-- 셀랙트 바 -->
+    <div class="topBox">
+        <div class="leftBox">
+            <div class="condition center">인간관계</div>
+            <div class="conditionNum">+<span id="cdNum">2</span></div>
+        </div>
+        <div class="rightBox">
+            <div class="orderBy">최신순</div>
+            <div class="orderImg"><img src="./css/activity/recommend_sort_btn.png" alt="" class="orderArrow"></div>
+        </div>
+    </div>
+
+    <!-- 리스트 -->
+    <div class="listContainer0">
+        <div class="list">
+            <div class="listImg2"></div>
+            <div class="condition2">출퇴근에 지칠 때</div>
+            <div class="Title">효과직빵 스트레칭</div>
+            <div class="infoContents"><img class="animalIcon" src="./css/myPage_img/gaori.png">@<span id="id">yageun</span></div>
+        </div>
+
+        <div class="list">
+            <div class="listImg2"></div>
+            <div class="condition2">출퇴근에 지칠 때</div>
+            <div class="Title">효과직빵 스트레칭</div>
+            <div class="infoContents"><img class="animalIcon" src="./css/myPage_img/gaori.png">@<span id="id">yageun</span></div>
+        </div>
+
+        <div class="list">
+            <div class="listImg2"></div>
+            <div class="condition2">출퇴근에 지칠 때</div>
+            <div class="Title">효과직빵 스트레칭</div>
+            <div class="infoContents"><img class="animalIcon" src="./css/myPage_img/gaori.png">@<span id="id">yageun</span></div>
+        </div>
+
+        <div class="list">
+            <div class="listImg2"></div>
+            <div class="condition2">출퇴근에 지칠 때</div>
+            <div class="Title">효과직빵 스트레칭</div>
+            <div class="infoContents"><img class="animalIcon" src="./css/myPage_img/gaori.png">@<span id="id">yageun</span></div>
+        </div>
+
+        <div class="list">
+            <div class="listImg2"></div>
+            <div class="condition2">출퇴근에 지칠 때</div>
+            <div class="Title">효과직빵 스트레칭</div>
+            <div class="infoContents"><img class="animalIcon" src="./css/myPage_img/gaori.png">@<span id="id">yageun</span></div>
+        </div>
+
+    </div>
+
+    <!--팝업-->
+    <div class="popContainer popContainer0 center">
+        <div class="whiteBox">
+
+            <div class="headLine"><img src="./css/activity/recommend_menu_latest_onlyicon.png" alt=""
+                    class="orderIcon">최신순</div>
+            <div class="headLine"><img src="./css/activity/recommend_menu_bookmark_onlyicon.png" alt=""
+                    class="orderIcon">북마크순</div>
+            <div class="headLine"><img src="./css/activity/recommend_menu_view_onlyicon.png" alt=""
+                    class="orderIcon">조회순</div>
+
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    var order = "최신순"
+    $(document).ready(function () {
+
+
+        //소트{
+        $('.orderImg').on('click', function () {
+            console.log('팝')
+            $('.popContainer0').show()
+
+            $('.headLine').on('click', function () {
+                console.log('팝닫')
+                order = $(this).text()
+                $('.orderBy').text(order);
+                $('.popContainer0').hide()
+            });
+
+        });
+
+        //페이지 이동{
+        $('.list').on('click', function () {
+            location.href = "./userActDt.html"
+        });
+
+    });
+</script>

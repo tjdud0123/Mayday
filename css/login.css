@@ -1,0 +1,115 @@
+/* 글씨체 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+body {
+    background-image: url(./login_img/log_in.png);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: 70% 40%;
+}
+
+.Box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 54.93vh;
+}
+
+.input {
+    box-sizing: border-box;
+    width: 80.8vw;
+    height: 3.94vh;
+    border-bottom: solid 1px white;
+    color: white;
+    font-family: 'NanumSquare';
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.idLabel {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* input 기본 스타일 초기화 */
+input {
+    padding-bottom: 1.35vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0);
+    width: 50vw;
+    margin-left: 20.8vw;
+    color: white;
+    font-family: 'NanumSquare';
+    border-style: none;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color:rgba(255,255,255,0.6);
+  }
+
+/* 아이디 창*/
+.idBox {
+    margin-bottom: 3.08vh;
+    display: flex;
+    align-items: center;
+}
+
+/* 패스워드 창*/
+.pwBox {
+    margin-bottom: 4.19vh;
+}
+
+input[type=password]{
+    font-family:'Arial'
+}
+
+
+/* 로그인 버튼 */
+.buttonBox {
+    background-color: white;
+    color: #0A74D8;
+    font-size: 18px;
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    height: 6.28vh;
+    width: 80.8vw;
+    border-radius: 30px;
+}
+
+/* 회원가입 */
+.signUpBox {
+    color: white;
+    font-family: 'NanumSquare';
+}
+
+span {
+    margin-right: 2.67vw;
+}
+
+a {
+    display: inline-block;
+    color: white;
+    font-family: 'NanumSquare';
+    font-style: none;
+    padding: 2.59vh 0;
+}

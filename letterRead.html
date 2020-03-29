@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>MayDay</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/topNham.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <link rel='stylesheet' href='./css/letterRead.css'>
+</head>
+
+<body>
+    <!-- 상단바 -->
+    <div class="topContainer center">
+        <div class="back"><img src="./css/white_back.png" alt="" class="back_arrow"></div>
+        <div class="title center">편지 읽기</div>
+        <img class='hamburger topRight' src="./css/hamburger_icon.png">
+    </div>
+
+    <!-- 안내 -->
+    <!-- 필터 -->
+    <div class="outerBox center">
+        <div class="filterContainer center">
+            <div class="infoText center">바다에 떠 있는 편지를 확인해 보세요</div>
+            <div class="filterBox">
+                <div class="filter center filter2">경영 사무</div>
+                <div class="filter center filter3">20-24세</div>
+                <div class="filter center filter4">1년 이상</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 이미지 -->
+    <img class="sea wave" src="./css/bottle/wave6.png" alt="" class="wave" style="z-index:1;height:50.33vh;">
+    <img class="sea wave" src="./css/bottle/wave5.png" alt="" class="wave" style="z-index:2;height:47.13vh;">
+    <img class="sea bottle 1" src="./css/bottle/bottle1.png" alt="" class="wave"
+        style="z-index:3;top:46.87vh;left:54.4vw">
+    <img class="sea wave" src="./css/bottle/wave4.png" alt="" class="wave" style="z-index:4;height:43.12vh;">
+    <img class="sea bottle 2" src="./css/bottle/bottle2.png" alt="" class="wave"
+        style="z-index:5;top:58.28vh;left:13.6vw">
+    <img class="sea wave" src="./css/bottle/wave3.png" alt="" class="wave" style="z-index:6;height:32.28vh;">
+    <img class="sea wave" src="./css/bottle/wave2.png" alt="" class="wave" style="z-index:7;height:26vh;">
+    <img class="sea bottle 3" src="./css/bottle/bottle3.png" alt="" class="wave"
+        style="z-index:8;top:69.45vh;left:53.6vw">
+    <img class="sea wave" src="./css/bottle/wave1.png" alt="" class="wave" style="z-index:9;height:17.67vh;">
+
+    <!-- 가짜보틀 -->
+    <div class="1 fakebottle" style="top:46.87vh;left:54.4vw"></div>
+    <div class="2 fakebottle" style="top:58.28vh;left:13.6vw"></div>
+    <div class="3 fakebottle" style="top:69.45vh;left:53.6vw"></div>
+
+    <!-- 반짝이 -->
+    <img class="sea twinkle" src="./css/bottle/light1.png" alt="" class="wave"
+        style="top:51.48vh;left:50.13vw;height:1.48vh;">
+    <img class="sea twinkle" src="./css/bottle/light1.png" alt="" class="wave"
+        style="top:64.9vh;left:75.2vw;height:1.11vh;">
+    <img class="sea twinkle" src="./css/bottle/light1.png" alt="" class="wave"
+        style="top:63.55vh;left:12.53vw;height:1.48vh;">
+    <img class="sea twinkle" src="./css/bottle/light1.png" alt="" class="wave"
+        style="top:75.12vh;left:40.53vw;height:1.11vh;">
+    <img class="sea twinkle" src="./css/bottle/light1.png" alt="" class="wave"
+        style="top:75.98vh;left:37.6vw;height:0.74vh;">
+    <img class="sea twinkle" src="./css/bottle/light1.png" alt="" class="wave"
+        style="top:79.56vh;left:87.2vw;height:0.74vh;">
+
+
+    <!-- 팝업 -->
+    <div class="popContainer popContainer2 center">
+        <div class="popChoiceBox">
+            <div class="popTitle center" id="inst">직종을 선택해 주세요</div>
+            <div class="popContent">
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1 selected"></div>
+                    <div class="content">경영 사무</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">연구개발 설계</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">마케팅 광고 홍보</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">생산 제조</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">IT 인터넷</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">교육</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">디자인</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">건설</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">무역 유통</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">의료</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">영업 고객상담</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">서비스</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">전문 특수직</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">미디어</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="circle circle1"></div>
+                    <div class="content">기타</div>
+                </div>
+            </div>
+            <div class="popButton center" id="yes2">확인</div>
+        </div>
+    </div>
+
+    <div class="popContainer popContainer3 center">
+        <div class="popChoiceBox">
+            <div class="popTitle center" id="inst">나이를 선택해 주세요</div>
+            <div class="popContent">
+                <div class="contentLine contentLine2">
+                    <div class="circle circle2 selected"></div>
+                    <div class="content">20-24세</div>
+                </div>
+                <div class="contentLine contentLine2">
+                    <div class="circle circle2"></div>
+                    <div class="content">25-29세</div>
+                </div>
+                <div class="contentLine contentLine2">
+                    <div class="circle circle2"></div>
+                    <div class="content">30-34세</div>
+                </div>
+                <div class="contentLine contentLine2">
+                    <div class="circle circle2"></div>
+                    <div class="content">35-39세</div>
+                </div>
+                <div class="contentLine contentLine2">
+                    <div class="circle circle2"></div>
+                    <div class="content">40세 이상</div>
+                </div>
+                <div class="contentLine contentLine2">
+                    <div class="circle circle2"></div>
+                    <div class="content">50세 이상</div>
+                </div>
+
+            </div>
+            <div class="popButton center" id="yes3">확인</div>
+        </div>
+    </div>
+
+    <div class="popContainer popContainer4 center">
+        <div class="popChoiceBox">
+            <div class="popTitle center" id="inst">연차를 선택해 주세요</div>
+            <div class="popContent">
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3 selected"></div>
+                    <div class="content">1년 이하</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">1-2년</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">2-3년</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">3-5년</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">5-7년</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">7-10년</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">10년 이상</div>
+                </div>
+
+            </div>
+            <div class="popButton center" id="yes4">확인</div>
+        </div>
+    </div>
+
+    
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('.popContainer').hide();
+        let category;
+        let age;
+        let year;
+        //직종선택
+        $('.filter2').on('click', function () {
+            console.log('직종선택')
+            $('.popContainer2').show();
+            $('img.bottle').css('animation', '');
+
+            $('.contentLine1').on('click', function () {
+
+                let isSelected = $(this).children(':first').hasClass("selected")
+
+                if (!isSelected) {
+                    $('.circle1').removeClass('selected')
+                    $(this).children(':first').addClass('selected')
+                    category = $(this).children(':last').text()
+                    console.log(category)
+                }
+
+                $('#yes2').on('click', function () {
+                
+                    $('img.bottle').css('animation', 'pong 2s ease-in-out');
+                    $('img.bottle').bind(
+                        'oanimationend animationend webkitAnimationEnd',
+                        function () {
+                            console.log(this);
+                            $(this).css('animation', 'swing 3.5s infinite 0.8s');
+                        });
+                });
+            });
+        });
+
+        //나이선택
+        $('.filter3').on('click', function () {
+            console.log('나이선택')
+            $('img.bottle').css('animation', '');
+
+            $('.popContainer3').show();
+
+            $('.contentLine2').on('click', function () {
+
+                let isSelected = $(this).children(':first').hasClass("selected")
+
+                if (!isSelected) {
+                    console.log('>>>>', $(this).children(':first'))
+                    $('.circle2').removeClass('selected')
+                    $(this).children(':first').addClass('selected')
+                    age = $(this).children(':last').text()
+                    console.log(age)
+                }
+
+            });
+
+        });
+
+        $('#yes3').on('click', function () {
+            $('.popContainer3').hide();
+            $('.filter3').text(age);
+            $('img.bottle').css('animation', 'pong 2s ease-in-out');
+            $('img.bottle').bind(
+                'oanimationend animationend webkitAnimationEnd',
+                function () {
+                    console.log(this);
+                    $(this).css('animation', 'swing 3.5s infinite 0.8s');
+                });
+        });
+
+
+        //연차선택
+        $('.filter4').on('click', function () {
+            console.log('연차선택')
+            $('.popContainer4').show();
+            $('img.bottle').css('animation', '');
+
+            $('.contentLine3').on('click', function () {
+
+                let isSelected = $(this).children(':first').hasClass("selected")
+                if (!isSelected) {
+                    console.log('>>>', $('.circle3'))
+                    $('.circle3').removeClass('selected')
+                    $(this).children(':first').addClass('selected')
+                    year = $(this).children(':last').text()
+                    console.log(year)
+                }
+
+            });
+
+        });
+
+        $('#yes4').on('click', function () {
+            $('.popContainer4').hide();
+            $('.filter4').text(year);
+            $('img.bottle').css('animation', 'pong 2s ease-in-out');
+            $('img.bottle').bind(
+                'oanimationend animationend webkitAnimationEnd',
+                function () {
+
+                    $(this).css('animation', 'swing 3.5s infinite 0.8s');
+                });
+        });
+
+        //보틀
+        $('div.fakebottle').on('click', function () {
+            let index = $(this).attr('class')[0];
+            $('.' + index).css('animation', 'pong 2s ease-in-out');
+            $('.' + index).bind('oanimationend animationend webkitAnimationEnd', function () {
+                $('.' + index).css('animation', 'swing 3.5s infinite 0.5s');
+                location.href="./letterReply.html"
+            });
+        });
+
+      
+
+    });
+</script>

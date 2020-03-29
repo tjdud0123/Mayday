@@ -1,0 +1,407 @@
+/* 글씨체 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+/*--------------------- 위 화면 --------------------*/
+
+
+/* 스크롤막기 */
+.scrollOff{position:fixed;overflow:hidden;height:100%;}
+
+/* 배경 */
+
+audio {
+    display:none;
+}
+.indexBox {
+    padding-top: 10vh;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./home_img/back/day1.png);
+    background-position: center 40%;
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.ship{
+    position:absolute;
+    width: 65.75vw;
+    top:46.64vh;
+    left:32vw;
+}
+
+.light>img {
+    z-index:2;
+    top:0;
+    position: absolute;
+    height: 100vh;
+    mix-blend-mode: screen;
+    animation: fadeIn 4s ease-in-out alternate infinite;
+}
+
+.index2 {
+    background-image: url(./home_img/back/day2.png);
+}
+
+.boatContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boat{
+    position:absolute;
+    width:47.6vw;
+    height:20.45vh;
+}
+
+/* nav 바 */
+.topContainer {
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    z-index:1;
+}
+
+.logo {
+    top:4.3vh;
+    position: absolute;
+}
+
+.hamburger {
+    top: 4.3vh;
+    position: absolute;
+    right: 0;
+
+}
+
+/* 아이콘 */
+.icon {
+    z-index:3;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.alert{
+    z-index:4 !important;
+    position: absolute;
+    left:29vw;
+    top:67vh;
+    z-index:2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-family: NanumSquareOTF;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.num{
+    position: absolute;
+    padding-right:2.5px;
+}
+
+.alert_img{
+    width:2.8vh;
+    height:2.8vh;
+}
+
+img.circle_img {
+    height: 6.28vh;
+    width: 6.28vh;
+}
+
+.icon1 {
+    position: absolute;
+    left: 25vw;
+    top: 68.2vh;
+}
+
+.icon2 {
+    position: absolute;
+    left: 74.7vw;
+    top: 30.8vh;
+}
+
+.icon3 {
+    position: absolute;
+    left: 20.8vw;
+    top: 34vh;
+}
+
+
+.icon4 {
+    position: absolute;
+    left: 72vw;
+    top: 70.06vh;
+}
+
+.icon5 {
+    position: absolute;
+    left: 48.53vw;
+    top: 31.03vh;
+}
+
+.icon6 {
+    position: absolute;
+    left: 20.53vw;
+    top: 61.59vh;
+}
+
+.arrow1 {
+    width: 25.3vw;
+    height: 7.38vh;
+    top: 62.8vh;
+    left: 38.4vw;
+    position: absolute;
+}
+
+.arrow2 {
+    width: 14.93vw;
+    height: 19.58vh;
+    top: 36.2vh;
+    left: 66.6vw;
+    position: absolute;
+}
+
+.arrow3 {
+    width: 16.53vw;
+    height: 18.84vh;
+    top: 39.9vh;
+    left: 27.73vw;
+    position: absolute;
+}
+
+.arrow4 {
+    width: 13.6vw;
+    height: 2.67vh;
+    top: 70.06vh;
+    left: 65.3vw;
+    position: absolute;
+}
+
+.arrow5 {
+    width: 10.16vw;
+    height: 17.3vh;
+    top: 34.72vh;
+    left: 53.98vw;
+    position: absolute;
+}
+
+.arrow6 {
+    width: 20.65vw;
+    height: 10.81vh;
+    top: 53.98vh;
+    left: 28.13vw;
+    position: absolute;
+}
+
+.func {
+    font-family: 'NanumSquare';
+    font-size: 14px;
+    font-weight: 700px;
+    color: white;
+    position: absolute;
+}
+
+.func1 {
+    padding-top: 8px;
+    position: relative;
+    
+}
+
+.func2 {
+    padding-bottom: 8px;
+    position: relative;
+    
+}
+
+.func3 {
+    padding-bottom: 8px;
+    position: relative;
+}
+
+
+
+/* 인포메이션 */
+.info {
+    width: 33.6vw;
+    height: 5.78vh;
+    padding: 8px 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'NanumSquare';
+
+}
+
+.infoContainer {
+    z-index:3 !important;
+    position:absolute;
+    width:100%;
+    top: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8vh;
+    animation: move_to_top ease-in-out 1s;
+    z-index:1;
+}
+
+.person{
+    padding-top: 23vh;
+    padding-left: 16vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fish{
+    position: absolute;
+    top:20vh;
+}
+
+.job {
+    padding-bottom: 2px;
+}
+
+
+/* 밑에 화살표 */
+.down_arrow {
+    width: 40px;
+    height: 40px;
+}
+
+.downContainer {
+    position:absolute !important;
+    bottom:5vh;
+    width:100%;
+    width:100vm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index:2;
+}
+
+.up{
+    transform: rotate(180deg);
+}
+
+/* 애니메이션 */
+.fade {
+    animation: fadeIn ease-in 1s;
+}
+
+.fadeOut{
+    animation: fadeOut ease-in 1s;
+}
+
+.person{
+    animation: swim 2s ease-in-out alternate infinite;
+}
+
+.fish{
+    opacity:0.4;
+}
+
+@keyframes swim {
+    0% {
+        
+    }
+
+    100% {
+        transform: translateY(1.97vh);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes move_to_top {
+    0% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+/*--------------------- 아래 화면 --------------------*/
+
+.up_arrow {
+    transform: rotate(180deg);
+
+}
+
+/* circle */
+.circle{
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+    color:white;
+    position: absolute;
+    top:50vh;
+    animation: fadeinout 10s infinite;
+    opacity: 0;
+}
+
+@keyframes fadeinout {
+    0% {
+        opacity:0
+    }
+
+    50% {
+        opacity:1
+    }
+
+    100%{
+        opacity:0
+    }
+}

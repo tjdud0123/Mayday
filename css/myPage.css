@@ -1,0 +1,251 @@
+/* 글씨체 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+.nanumB18 {
+    font-family: 'NanumSquare';
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.nanumB16 {
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./myPage_img/mypage_background.png);
+    background-color: white;
+    background-position: -20% left;
+    background-size: 100vw 44.04vh;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    position: relative;
+    font-family: 'NanumSquare';
+}
+
+/* top bar */
+.topContainer {
+    position: fixed;
+    width: 100vw;
+    height: 14.04vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0);
+    color:white;
+}
+
+.back {
+    position: absolute;
+    left: 0;
+}
+
+.back_arrow {
+    width: 15.47vw;
+}
+
+.title2 {
+    color:white;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.complete {
+    font-weight: 700;
+    width: 15.47vw;
+    height: 4.43vh;
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+}
+
+.hamburger {
+    
+    position: absolute;
+    right: 0;
+}
+
+/* 파란 부분 */
+.animalBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+img.animal {
+    height: 16.63vh;
+}
+
+.infoText {
+    color: white;
+    margin-top: -2vh;
+}
+
+.hamInfoBox2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.33vh 11.2vw 9.5vh 11.2vw;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.hamBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    font-family: 'NanumSquare';
+    box-sizing: border-box;
+}
+
+.hamBox>.infoNum {
+    padding-top: 1.6vh;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+/* 흰 부분 */
+
+.titleText {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 3.69vh 4.27vw;
+    color: #0A74D8;
+
+}
+
+img.edit {
+    width: 19.2vw;
+}
+
+.infoLine {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding-bottom: 2.46vh;
+}
+
+.title {
+    position: relative;
+    left: 4.27vw;
+}
+
+.text {
+    position: absolute;
+    left: 32.53vw;
+    font-family: 'NanumSquare';
+}
+
+.line {
+    border: 2px solid #F7F7F7;
+    margin: 0 4.27vw 2.46vh 4.27vw;
+}
+
+.logOut {
+    color: #C4C4C4;
+    padding: 0.97vh 0 2vh 4.27vw;
+    width: 20vw;
+}
+
+
+/*팝업*/
+.popContainer {
+    /*visibility: hidden;*/
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.whiteBox {
+    border-radius: 10px;
+    background-color: white;
+    width: 91.46vw;
+}
+
+.headLine {
+    font-weight: 700;
+    font-size: 14px;
+    padding: 2.94vh 0 3.37vh 0;
+    position: relative;
+}
+
+img.close {
+    width: 15.47vw;
+    position: absolute;
+    right:0;
+}
+
+.nick{
+    font-weight: 800;
+    font-size: 18px;
+    color: #0A74D8;
+}
+
+img.popAnimal {
+    height: 19.83vh;
+}
+
+.popAnimalBox{
+    background-image: url(./myPage_img/mypage_leve_background_circle.png);
+    background-position: center center;
+    background-size: 47.73vw;
+    background-repeat: no-repeat;
+    margin-bottom: 2.3vh;
+}
+
+.innerProg{
+    height: 0.25vh;
+    width: 57.6vw;
+    background-color: #F7F7F7;
+    margin-bottom:1.84vh;  
+}
+
+.outerProg{
+    height: 0.25vh;
+    width: 30vw;
+    background-color: #0A74D8;
+}
+
+.nextInfo{
+    font-weight: 700;
+    font-size: 14px;
+    padding-bottom: 3.45vh;
+}
+
+span#rest{
+    font-weight: 800;
+    color: #0A74D8;
+}
+
+.line2{
+    border: 2px solid #F7F7F7;
+}
+.inst{
+    padding: 2.96vh 0;
+}
+img.instruction{
+    height: 12.63vh;
+}

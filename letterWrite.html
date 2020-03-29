@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MayDay</title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/letterWrite.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 상단바 -->
+    <div class="topContainer center">
+        <div class="back"><img src="./css/white_back.png" alt="" class="back_arrow"></div>
+        <div class="title center">편지 쓰기</div>
+        <div class="complete center">전송</div>
+    </div>
+
+    <!-- 카드 -->
+    <div class="letter center">
+
+
+        <div class="card cardBack center" id="card_back">
+            <img src="./css/letter/wrt_postcard_back.png" alt="" class="cardImg">
+            <div class="textNum"><span id="stateNum">0</span>/500</div>
+            <textarea maxlength="500" type="text" id="writeText"
+                placeholder="오늘도 일이 너무 많아 야근을 했다. 죽을맛이다으아아아악 김부장은 왜 나한테만 난리치냐으아아아아아"></textarea>
+            <div class="letterDown">
+                <div class="downLeft center"><img class="emotion1" src="css/letter/no.png">감정을 표현해주세요</div>
+                <div class="downRight center"><img class="emotion2" src="css/letter/checkbox_bf.png">비공개</div>
+            </div>
+
+            <div class="emBox">
+                <img id="sad" src="./css/letter/emotion_img/sad.png" alt="" class="emOn">
+                <img id="angry" src="./css/letter/emotion_img/angry.png" alt="" class="emOn">
+                <img id="depressed" src="./css/letter/emotion_img/depressed.png" alt="" class="emOn">
+                <img id="anxiety" src="./css/letter/emotion_img/anxiety.png" alt="" class="emOn">
+                <img id="shame" src="./css/letter/emotion_img/shame.png" alt="" class="emOn">
+            </div>
+
+        </div>
+
+        <div class="card cardFront center" onclick="flip(event)">
+            <img src="./css/letter/wrt_postcard_front.png" alt="" class="cardImg">
+            <div class="frontText frontText1">
+                <div class="upText">@<span id="id">ideeper</span></div>
+                <div><span id="category">의료</span>&nbsp;|&nbsp;<span id="year">20-24</span>&nbsp;|&nbsp;<span
+                        id="age">1년 이하</span></div>
+            </div>
+            <div class="frontText frontText2">
+                <div class="upText">???</div>
+                <div>가까운 바다 어딘가</div>
+            </div>
+        </div>
+    </div>
+     <!-- 이모티콘 고르기 -->
+     <div class="emoticonBox" id="emoticonBox">
+        <img class="emotext" src="./css/letter/emotion_img/w0_sad.png" alt="">
+        <img class="emotext" src="./css/letter/emotion_img/w0_angry.png" alt="">
+        <img class="emotext" src="./css/letter/emotion_img/w0_depressed.png" alt="">
+        <img class="emotext" src="./css/letter/emotion_img/w0_anxiety.png" alt="">
+        <img class="emotext" src="./css/letter/emotion_img/w0_shame.png" alt="">
+        <!-- <input type="text" class="trick"> -->
+    </div>
+
+    <!-- 안내 -->
+    <div class='instruction center'>편지를 터치해주세요</div>
+
+    <!-- 팝업창 -->
+    <div class="popContainer popContainer1 center">
+        <div class="popConfirmBox">
+            <div class="popTitle center2" id="isSend">편지를 보낼까요?</div>
+            <div class="popButton center">
+                <div id="no1" class="center">아니요</div>
+                <div id="yes1" class="center">네</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popContainer popContainer2 center">
+        <div class="popConfirmBox">
+            <div class="popTitle center2" id="isSend">
+                <div>지금 돌아가면 편지가 지워집니다</div>
+                <div>돌아갈까요?</div>
+            </div>
+            <div class="popButton center">
+                <div id="no2" class="center">아니요</div>
+                <div id="yes2" class="center">네</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popContainer popContainer3 center">
+        <div class="popConfirmBox">
+            <div class="popTitle center2" id="isSend">
+                <div>내용을 입력해주세요</div>
+            </div>
+            <div class="popButton center">
+                <div id="yes3" class="center">네</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 확인 창 -->
+    <div class="completeBox">
+        <div class="completeText">바다에 편지를 띄워 보냈어요</div>
+        <div class="aBox center">
+            <a href="./index.html">확인</a>
+        </div>
+    </div>
+
+
+</body>
+
+
+<script>
+    // setInterval(function () {
+    //     let viewheight = $(window).height();
+    //     let viewwidth = $(window).width();
+    //     let viewport = document.querySelector("meta[name=viewport]");
+    //     viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth +
+    //         "px, initial-scale=1.0");
+    // }, 100);
+
+    $(window).resize(function () {
+        let viewheight = $(window).height();
+        let viewwidth = $(window).width();
+        let viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth +
+            "px, initial-scale=1.0")
+            // alert($('.emoticonBox').offset().top)
+        if($('.emoticonBox').offset().top > 500){
+            $('.emoticonBox').hide();
+        }else{
+            $('.emoticonBox').show();
+        }
+    });
+
+    let stateNum = -1;
+    // 카드 플립
+    function flip(event) {
+        var front = event.currentTarget;
+        var back = document.getElementById("card_back");
+
+        front.style.transform = "rotateY(-180deg)";
+        front.style.webkitTransform =  "rotateY(-180deg)";
+        back.style.transform = "rotateY(0deg)";
+        back.style.webkitTransform = "rotateY(0deg)";
+        $('.card').bind(
+            'transitionend oTransitionEnd webkitTransitionEnd',
+            function () {
+                console.log('flip');
+                $('.cardFront').css('display', 'none');
+            });
+
+        $(".instruction").fadeOut('slow');
+    };
+
+    $(document).ready(function () {
+
+        // popup없애놓기
+        $('.popContainer').hide();
+        $('.completeBox').hide();
+
+        //이모티콘박스 없애두기
+        $('.emoticonBox').hide();
+
+        // 글자수 제한
+        $('#writeText').on('keyup', function () {
+            stateNum = $(this).val().length
+            if (stateNum > 500) {
+                $(this).val($(this).val().substring(0, 500));
+            }
+            $('#stateNum').text(stateNum)
+        });
+
+        // 전송팝업
+        $('.complete').on('click', function () {
+            stateNum = $('#writeText').val().length
+            console.log('전송', stateNum)
+            if (stateNum == 0) {
+                console.log('0자')
+                $('.popContainer3').show();
+
+                $('#yes3').on('click', function () {
+                    $('.popContainer3').hide();
+                });
+
+            } else {
+                $('.popContainer1').show();
+
+                $('#no1').on('click', function () {
+                    $('.popContainer1').hide();
+                });
+                $('#yes1').on('click', function () {
+                    $('.popContainer1').hide();
+                    $('.completeBox').show();
+                });
+            }
+
+        });
+
+        //뒤로가기
+        $('.back').on('click', function () {
+            console.log('뒤로가기')
+
+            $('.popContainer2').show();
+
+            $('#no2').on('click', function () {
+                $('.popContainer2').hide();
+            });
+            $('#yes2').on('click', function () {
+                $('.popContainer2').hide();
+                $('.popContainer').hide();
+                history.back();
+            });
+
+
+        });
+
+        //공개, 비공개
+        let gongae = true
+        $('.downRight').on('click', function () {
+            
+            if (gongae) {
+                $(".emotion2").attr("src", './css/letter/checkbox_aft.png');
+                gongae = false
+            } else {
+                $(".emotion2").attr("src", './css/letter/checkbox_bf.png');
+                gongae = true
+            }
+        });
+
+        //이모티콘 바꾸기
+        $('.downLeft').on('click', function () {
+            $('.emoticonBox').show();
+        });
+
+        $('textarea').focus(function () {
+            $('.emoticonBox').show();
+            let viewheight = $(window).height();
+            let viewwidth = $(window).width();
+            let viewport = document.querySelector("meta[name=viewport]");
+            viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth +
+                "px, initial-scale=1.0")
+            console.log('포커스')
+        });
+
+        let imOn = 0
+        let x = $('.letterDown').offset().left
+        let emotions = []
+        $('.emotext').on('click', function () {
+            let srcText = $(this).attr('src');
+            let length = srcText.length;
+            $('.emOn').css('display', 'none')
+            console.log(document.getElementById('writeText'));
+            document.getElementById('writeText').focus();
+            console.log('yes')
+
+            //활성화
+            if (srcText.includes("0")) {
+                $(this).attr('src', srcText.replace('0', ''));
+                imOn++;
+                let emotion = srcText.substring(28, length - 4);
+                emotions.push(emotion)
+                console.log(emotions);
+                emotions.forEach((value, index) => {
+                    $('#' + value).css({
+                        'display': 'inline-block',
+                        'left': (x + index * 30) + 'px'
+                    });
+                });
+                
+
+                //비활성화
+            } else {
+                $(this).attr('src', srcText.replace('w_', 'w0_'))
+                imOn--;
+                let emotion = srcText.substring(27, length - 4);
+
+                emotions.splice(emotions.indexOf(emotion), 1);
+                console.log(emotions);
+                emotions.forEach((value, index) => {
+                    $('#' + value).css({
+                        'display': 'inline-block',
+                        'left': (x + index * 30) + 'px'
+                    });
+                });
+
+           
+            }
+
+            // document.getElementById('writeText').focus();
+
+
+
+            //downLeft 상태
+            if (imOn) {
+                console.log(imOn);
+                $('.downLeft').css('visibility', 'hidden');
+            } else {
+                console.log(imOn);
+                $('.downLeft').css('visibility', 'visible');
+            }
+        });
+
+
+      
+    });
+</script>

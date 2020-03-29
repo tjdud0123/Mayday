@@ -1,0 +1,169 @@
+.downContainer{
+    margin-top: 14.04vh;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 사진 */
+.userPhoto{
+    height: 49.51vh;
+    width: 100vw;
+    background-image: url(./activity/write2.png);
+    background-position: center;
+    background-size:180vw;
+}
+
+/* 헤드 */
+.contentHead{
+    padding:2.46vh 4.27vw 0.62vh 4.27vw;
+    border-bottom: 2px solid #f7f7f7;
+}
+
+.condition{
+    font-weight: 700;
+    font-size: 14px;
+    color: #0A74D8;
+    margin-bottom: 0.44vh;
+}
+
+.title0{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.id, .date{
+    font-weight: 700;
+    font-size: 12px;
+    color: #C4C4C4;
+    margin-bottom: 0.37vh;
+}
+
+.headDown{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.markIcon{
+    width: 40px;
+    height: 40px;
+    margin-left: -3vw;
+}
+
+.bookInfo{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #0A74D8;
+}
+
+.titleImo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.7vh;
+}
+
+.search{
+    margin-right: -4vw;
+}
+
+/* 텍스트 */
+.textContent{
+    padding: 3.08vh 5vw 3.08vh 4.27vw;
+    line-height: 150%;
+    font-size: 14px;
+}
+
+
+/* 팝업 */
+
+.popContainer0 {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.whiteBox {
+    border-radius: 10px;
+    background-color: white;
+    width: 91.46vw;
+}
+
+.headLine {
+    padding: 2.5vh 0 2.5vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #e0e0e0
+}
+
+.headLine:last-child{
+    border:none
+}
+
+.headLine>img{
+    height: 25px;
+    margin-right:5.07vw;
+    margin-left: 32.53vw;
+}
+
+/*팝업 화면*/
+.popContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+.popConfirmBox{
+    background-color: white;
+    position: relative;
+    width: 91.47vw;
+    border-radius: 10px;
+    z-index: 3;
+    opacity: 1;
+    height: 24.63vh;
+}
+
+
+.popButton{
+    color:white;
+    background-color: white;
+    height: 7.39vh;
+    border-top: 1px solid  #0A74D8;
+    border-radius: 0 0 10px 10px;
+}
+
+.popTitle{
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    font-size: 18px;
+    border-bottom:2px solid #F7F7F7;
+    height:17.73vh;
+}
+
+#no1{
+    color: #0A74D8;
+    width: 50%;
+    height: 100%;
+}
+
+#yes1{
+    color:white;
+    width: 50%;
+    height: 100%;
+    background-color:#0A74D8;
+    border-radius: 0 0 10px 0;
+}
+

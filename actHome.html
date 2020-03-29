@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>MayDay</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/topNham.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <link rel='stylesheet' href='./css/actHome.css'>
+</head>
+
+<body>
+    <!-- 상단바 -->
+    <div class="topContainer center">
+        <div class="back"><img src="./css/back.png" alt="" class="back_arrow"></div>
+        <div class="title center">활동 추천</div>
+        <div class="topRight">
+            <img class='hamburger' src="./css/hamburger_blk.png">
+        </div>
+    </div>
+
+    <!-- 해시태그 셀렉트 -->
+    <div class="hashTop">
+        <div class="cdHash center cdSelected">인간관계</div>
+        <div class="cdHash center">출퇴근</div>
+        <div class="cdHash center">금전적 문제</div>
+        <div class="cdHash center">잦은 회식</div>
+        <div class="cdHash center">야근</div>
+        <div class="cdHash center">낮은 성취감</div>
+    </div>
+
+    <!-- 에디터 픽 -->
+    <div class="titleBox">에디터의 pick <img src="./css/activity/arrow.png" alt="" class="more"></div>
+
+    <div class="edtPickBox">
+
+        <div class="edList center">
+            <div class="filter center">
+                <div class="conTitle" id="condition">출퇴근에 지칠 때</div>
+                <div class="aTitle" id="a">스트레스 확! 풀리는</div>
+                <div class="nTitle" id="n">넷플릭스 5선</div>
+            </div>
+        </div>
+
+        <div class="edList center">
+            <div class="filter center">
+                <div class="conTitle" id="condition">출퇴근에 지칠 때</div>
+                <div class="aTitle" id="a">스트레스 확! 풀리는</div>
+                <div class="nTitle" id="n">넷플릭스 5선</div>
+            </div>
+        </div>
+
+        <div class="edList center">
+            <div class="filter center">
+                <div class="conTitle" id="condition">출퇴근에 지칠 때</div>
+                <div class="aTitle" id="a">스트레스 확! 풀리는</div>
+                <div class="nTitle" id="n">넷플릭스 5선</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 유저 픽 -->
+    <div class="titleBox">누군가의 구조활동 <img src="./css/activity/arrow.png" alt="" class="more2"></div>
+    <div class="sub">다른 사람의 스트레스 완화 방법을 만나보세요</div>
+
+    <div class="userPickBox">
+
+        <div class="userList center">
+            <div class="filter2 center">
+                <div class="conTitle2" id="condition">인간관계가 힘들 때</div>
+                <div class="userTitle" id="a">일러스트 클래스 수강후기</div>
+            </div>
+            <img src="./css/myPage_img/gorae.png" alt="" class="listAnimal">
+            <img src="./css/activity/triangle.png" alt="" class="triangle">
+            <div class="levelInfo">고래 등급 @<span>나는야 추천왕</span>님의 추천</div>
+        </div>
+
+        <div class="userList center">
+            <div class="filter2 center">
+                <div class="conTitle2" id="condition">출퇴근에 지칠 때</div>
+                <div class="userTitle" id="a">스트레스 확! 풀리는</div>
+            </div>
+        </div>
+
+
+</body>
+
+<script>
+    $(document).ready(function () {
+
+        //상황선택
+        $('.cdHash').on('click', function () {
+            $(this).toggleClass('cdSelected');
+        });
+
+        //페이지 이동
+        $('.more').on('click', function () {
+            location.href = "./pickList1.html"
+        });
+
+        $('.more2').on('click', function () {
+            location.href = "./userList.html"
+        });
+
+        $('.edList').on('click', function () {
+            location.href = "./pickList2.html"
+        });
+
+        $('.userList').on('click', function () {
+            location.href = "./userActDt.html"
+        });
+
+    });
+</script>

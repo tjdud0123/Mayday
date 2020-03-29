@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MayDay</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/topNham.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <link rel='stylesheet' href='./css/bookMark.css'>
+</head>
+
+<body>
+    <!-- 상단바 -->
+    <div class="topContainer center">
+        <div class="back"><img src="./css/back.png" alt="" class="back_arrow"></div>
+        <div class="title center">내 활동 추천</div>
+        <img class='hamburger topRight' src="./css/hamburger_blk.png">
+    </div>
+
+    <!-- 햄버거 -->
+    <div class="popContainer pophamber">
+        <div class="hamburgerBox">
+            <!-- 햄버거윗부분 -->
+            <div class="hamInfo">
+                <!-- 아이콘 -->
+                <div class="iconBox">
+                    <div class="leftIcon">
+                        <div class="inline"><img class="hamIcon hamIcon1" src="./css/hamburger_home.png"></div>
+                        <div class="inline"><img class="hamIcon hamIcon2" src="./css/hamburger_my.png"></div>
+                    </div>
+                    <div class="rightIcon"><img class="hamIcon3" src="./css/close_white.png"></div>
+                </div>
+                <!-- 아이디 출력 -->
+                <p class="welcomeText"><span id="id">ideeper</span>님,<br>오늘 하루도 수고했어요!</p>
+                <!-- 정보 출력 -->
+                <div class="hamInfoBox">
+                    <div class="hamBox hamBox1">
+                        <div>내가 쓴 편지</div>
+                        <div class="infoNum" id="myWrite">47</div>
+                    </div>
+                    <div class="hamBox hamBox2">
+                        <div>내가 쓴 답장</div>
+                        <div class="infoNum" id="myReple">60</div>
+                    </div>
+                    <div class="hamBox">
+                        <div>내 활동추천</div>
+                        <div class="infoNum" id="myAct">10</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hamSelect">
+                <div class="hamMsgBox">
+                    <div class="MsTitle"><img class="blueIcon" src="css/hamburger_message.png">편지</div>
+                    <div class="selectMenu Menu1">편지 쓰기</div>
+                    <div class="selectMenu Menu2">편지 읽기</div>
+                    <div class="selectMenu Menu3">나에게 온 답장</div>
+                </div>
+                <div class="hamActBox">
+                    <div class="MsTitle"><img class="blueIcon" src="css/hamburger_recommend.png">활동</div>
+                    <div class="selectMenu Menu4">활동 추천</div>
+                    <div class="selectMenu Menu5">북마크</div>
+                    <div class="selectMenu Menu6">글 쓰기</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 리스트 -->
+
+    <div class="listContainer listContainer2">
+        <!-- 사용자 픽 -->
+        <div class="list userPick">
+            <div class="imgBox2"></div>
+            <div class="contentBox2">
+                <div class="condition">야근 할 때</div>
+                <div class="contentTitle3">절대 잠 안오는 커피 만들기</div>
+                <div class="infoContents" id="date">2019.10.11</span></div>
+            </div>
+
+        </div>
+        <div class="list userPick">
+            <div class="imgBox2"></div>
+            <div class="contentBox2">
+                <div class="condition">야근 할 때</div>
+                <div class="contentTitle3">절대 잠 안오는 커피 만들기</div>
+                <div class="infoContents" id="date">2019.10.11</span></div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+
+        //페이지 이동{
+        $('.list').on('click', function () {
+            location.href = "userActDt.html"
+        });
+
+    });
+</script>

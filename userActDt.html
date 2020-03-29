@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MayDay</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/topNham.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <link rel='stylesheet' href='./css/userDetail.css'>
+</head>
+
+<body>
+    <!-- 상단바 -->
+    <div class="topContainer center">
+        <div class="back"><img src="./css/back.png" alt="" class="back_arrow"></div>
+        <div class="title center">누군가의 구조활동</div>
+        <div class="topRight">
+            <img class='hamburger' src="./css/hamburger_blk.png">
+        </div>
+    </div>
+
+    <div class="downContainer">
+        <div class="userPhoto"></div>
+
+        <div class="contentHead">
+            <div class="condition">인간관계가 힘들 때</div>
+            <div class="titleImo">
+                <div class="title0">5분만에 만들 수 있는 존맛 라면 레시피</div>
+                <img class='search' src="./css/activity/menu.png">
+            </div>
+            <div class="id">@<span id="id">recipe</span></div>
+            <div class="headDown">
+                <div class="bookInfo">
+                    <img src="./css/actIcon/bookmark_bf.png" alt="" class="markIcon">
+                    <div class="bookNum center">97</div>
+                </div>
+                <div class="date">2019.10.11</div>
+            </div>
+        </div>
+
+        <div class="textContent">제가 야근할 때 회사에서 자주 끓여 먹는 레시피 여기에서만
+            공유합니다 ㅠ 저희 회사 직원들도 다 이거 먹어보고 최고라고 했을 만큼 존맛 그자체 라면이예요
+        </div>
+
+    </div>
+
+    <!--팝업-->
+    <div class="popContainer popContainer0 center">
+        <div class="whiteBox">
+
+            <div class="headLine modify"><img src="./css/activity/modify.png" alt=""
+                    class="orderIcon">수정</div>
+            <div class="headLine delete"><img src="./css/activity/trash.png" alt=""
+                    class="orderIcon">삭제</div>
+
+        </div>
+    </div>
+
+    <div class="popContainer popContainer1 center">
+            <div class="popConfirmBox">
+                <div class="popTitle center" id="isSend">이 게시물을 삭제하시겠어요?</div>
+                <div class="popButton center">
+                    <div id="no1" class="center">아니요</div>
+                    <div id="yes1" class="center">네</div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        
+
+        //아이디 다르면 
+        $('.title').text('누군가의 구조 활동')
+        $('.search').hide()
+
+
+         //아이디 같으면
+        $('.title').text('내 활동 추천')
+        $('.search').show()
+
+
+         //메뉴
+            $('.search').on('click', function () {
+            console.log('팝')
+            $('.popContainer0').show()
+
+            $('.delete').on('click', function () {
+                $('.popContainer0').hide()
+                $('.popContainer1').show()
+
+                $('#no1').on('click', function () {
+                    $('.popContainer').hide();
+                });
+                $('#yes1').on('click', function () {
+                    $('.popContainer').hide();
+                    location.href = "myActivity.html"
+                });
+            
+            })
+            $('.modify').on('click', function () {
+                $('.popContainer0').hide()
+                location.href = "userWrite.html"
+            });
+
+        });
+
+
+        //북마크
+        $('.markIcon').on('click', function () {
+            $(this).toggleClass('marked')
+            console.log(this)
+            if ($(this).hasClass('marked')) {
+                console.log('yes')
+                $(this).attr("src", './css/actIcon/bookmark_aft.png');
+
+            } else {
+                console.log('no')
+                $(this).attr("src", './css/actIcon/bookmark_bf.png');
+            }
+        });
+
+    });
+</script>

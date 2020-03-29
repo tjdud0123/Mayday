@@ -1,0 +1,223 @@
+/* 글씨체 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+/* top bar */
+.topContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 14.04vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    position: absolute;
+    left: 0;
+}
+
+.back>img {
+    width: 15.47vw;
+}
+
+.title {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    color: black;
+    font-size: 18px;
+}
+
+.complete {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    color: #0A74D8;
+    width: 15.47vw;
+    height: 4.43vh;
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+}
+
+/* 정보 입력 */
+
+.infoContainer {
+    padding-top: 14.94vh;
+    flex-direction: column;
+}
+
+.infoBox1 {
+    width: 82.93vw;
+    border-bottom: 1px solid black;
+    margin-bottom: 5.54vh;
+}
+
+.infoBox2 {
+    width: 82.93vw;
+    margin-bottom: 3.82vh;
+}
+
+.selectBox {
+    height: 4.93vh;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #A4A4A4;
+    font-family: 'NanumSquare';
+    padding-left: 2.93vw;
+}
+
+.infoTitle {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 1.6vh;
+}
+
+.infoInput {
+    box-sizing: border-box;
+    width: 80vw;
+    height: 3.94vh;
+    border-bottom: solid 1px white;
+    color: black;
+    font-family: 'NanumSquare';
+    display: flex;
+    justify-content: flex-start;
+}
+
+input {
+    padding-bottom: 0.74vh;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    font-family: 'Franklin Gothic Medium';
+    border-style: none;
+    font-size: 16px;
+}
+
+input[type=password] {
+    font-family: 'Arial'
+}
+
+div#idBox.infoInput{
+    box-sizing: border-box;
+    padding-bottom: 0.74vh;
+    display: flex;
+    align-items: center; 
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: #A4A4A4;
+}
+
+/* 정보 입력 */
+.popContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.passwordAlert{
+    position: absolute;
+    font-size:14px;
+    color:red;
+    padding-top:1vh;
+    visibility: hidden;
+}
+
+.popConfirmBox {
+    /*확인 창*/
+    /* display: none; */
+    /**/
+    background-color: white;
+    position: relative;
+    width: 91.47vw;
+    border-radius: 10px;
+    z-index: 3;
+    opacity: 1;
+    height: 24.63vh;
+}
+
+.popChoiceBox {
+    width: 91.47vw;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.popTitle {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    border-bottom: 2px solid #F7F7F7;
+    height: 8.62vh;
+}
+
+#isId {
+    height: 17.24vh;
+}
+
+#inst {
+    border-bottom: 2px solid #F7F7F7;
+    font-weight: 700;
+}
+
+.contentLine {
+    height: 4.93vh;
+    border-bottom: 1px solid #F7F7F7;
+    display: flex;
+    align-items: center;
+}
+
+.popContent {
+    height: 53.45vh;
+    overflow: scroll;
+}
+
+.circle {
+    width: 19px;
+    height: 19px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid #c8c8c8;
+    display: inline-block;
+    margin-left: 9.1vw;
+}
+
+.circle.selected {
+    border: 6px solid #0A74D8;
+    box-sizing: border-box;
+}
+
+.content {
+    font-family: 'NanumSquare';
+    display: inline-block;
+    padding-left: 7.2vw;
+}
+
+.popButton {
+    color: white;
+    background-color: #0A74D8;
+    height: 7.39vh;
+    border-radius: 0 0 10px 10px;
+
+}

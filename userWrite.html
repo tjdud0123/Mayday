@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MayDay</title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/userWrite.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 상단바 -->
+    <div class="topContainer center">
+        <div class="back"><img src="./css/back.png" alt="" class="back_arrow"></div>
+        <div class="title center">업로드</div>
+        <div class="complete center">작성</div>
+    </div>
+
+    <!-- 사진 -->
+    <div class="photo">
+
+    </div>
+
+    <!-- 상황선택 -->
+    <div class="hashTag center">
+        <div class="centerBox center">
+            <img src="./css/letterDetail/reply_hashtag.png" alt="" class="hashImg">
+            <div class="hashText center blank">상황을 선택해주세요</div>
+        </div>
+    </div>
+
+    <!-- 인풋 -->
+    <div class="inputContainer">
+        <input type="" class="userTitle" placeholder="제목">
+        <textarea name="" id="" class="userContent" placeholder="내용을 입력해주세요"></textarea>
+    </div>
+
+    <!-- 팝업 -->
+    <div class="popContainer popContainer3 center">
+        <div class="popConfirmBox">
+            <div class="popTitle center" id="isSend">
+                <div class="send center">상황을 선택해주세요</div>
+            </div>
+            <div class="popButton2 center">
+                <div id="yes3" class="center">확인</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popContainer popContainer4 center">
+        <div class="popChoiceBox">
+            <div class="popTitle2 center" id="inst">상황을 선택해 주세요</div>
+            <div class="popContent">
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3 selected"></div>
+                    <div class="content">야근으로 피곤할 때</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">인간관계가 힘들 때</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">낮은 성취감으로 우울할 때</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">금전적 문제로 힘들 때</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">잦은 회식으로 괴로울 때</div>
+                </div>
+                <div class="contentLine contentLine3">
+                    <div class="circle circle3"></div>
+                    <div class="content">출퇴근으로 지칠 때</div>
+                </div>
+
+            </div>
+            <div class="popButton center" id="yes4">확인</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    setInterval(function () {
+        let viewheight = $(window).height();
+        let viewwidth = $(window).width();
+        let viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth +
+            "px, initial-scale=1.0");
+    }, 100);
+
+    $(window).resize(function () {
+        let viewheight = $(window).height();
+        let viewwidth = $(window).width();
+        let viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth +
+            "px, initial-scale=1.0")
+    });
+
+    $(document).ready(function () {
+        //뒤로가기
+        $('.back').on('click', function () {
+            console.log('뒤로가기')
+            $('.popContainer').hide();
+            history.back();
+        });
+
+        // popup없애놓기
+        $('.popContainer').hide();
+        $('.completeBox').hide();
+
+
+        // 전송팝업
+        $('.complete').on('click', function () {
+            nullState = $('.hashText').hasClass('blank')
+            console.log('전송', nullState)
+            if (nullState) {
+                console.log('미선택')
+                $('.send').text('상황을 선택해주세요')
+                $('.popContainer3').show();
+
+                $('#yes3').on('click', function () {
+                    $('.popContainer3').hide();
+                });
+
+            } else {
+                $('.send').text('작성을 완료했습니다.')
+                $('.popContainer3').show();
+
+                $('#yes3').on('click', function () {
+                    $('.popContainer').hide();
+                    location.href = './myActivity.html'
+                });
+                //초기화
+                $('.userTitle').val("");
+                $('.userContent').val("");
+                $('.hashText').addClass('blank');
+            }
+
+        });
+
+        //해시태그
+        let condition = "상황을 선택해주세요"
+        $('.hashTag').on('click', function () {
+            console.log('pop')
+            $('.popContainer4').show();
+
+
+            $('.contentLine3').on('click', function () {
+
+                let isSelected = $(this).children(':first').hasClass("selected")
+                if (!isSelected) {
+                    console.log('>>>', $('.circle3'))
+                    $('.circle3').removeClass('selected')
+                    $(this).children(':first').addClass('selected')
+                    condition = $(this).children(':last').text()
+                    console.log(condition)
+                }
+
+                $('#yes4').on('click', function () {
+                    $('.popContainer4').hide();
+                    $('.hashText').text(condition);
+                    $('.hashText').removeClass('blank');
+                });
+
+            });
+        });
+
+    });
+</script>

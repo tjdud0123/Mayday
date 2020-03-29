@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>MayDay</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/topNham.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <link rel='stylesheet' href='css/toMe.css'>
+</head>
+
+<body>
+    <!-- 상단바 -->
+    <div class="topContainer center">
+        <div class="back"><img src="css/back.png" alt="" class="back_arrow"></div>
+        <div class="title center">내가 쓴 편지</div>
+        <img class='hamburger topRight' src="css/hamburger_blk.png">
+    </div>
+
+    <!-- 리스트 -->
+
+    <div class="listContainer">
+        <div class="list">
+            <div class="listTitle2">2019.07.19.화</div>
+            <div class="listContent3">오늘도 일이 너무 많아 야근을 했다. 오늘도 일이 너무 많아 야근을 했다. 오늘도 일이 너무 많아 야근을 했다</div>
+        </div>
+        <div class="list center">
+            <div class="listTitle2">2019.07.19.화</div>
+            <div class="listContent3">오늘도 일이 너무 많아 야근을 했다. 오늘도 일이 너무 많아 야근을 했다</div>
+            </div>
+    </div>
+
+  
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('.popContainer').hide();
+
+        // 글자수 제한
+        console.log($('.listContent3').text())
+        if ($('.listContent3').text().length > 51) {
+            $('.listContent3').text($('.listContent3').text().substring(0, 51) + '...');
+        }
+
+        //페이지 이동
+        $('.list').on('click', function () {
+            location.href = "./myLetterDt.html"
+        });
+    });
+</script>

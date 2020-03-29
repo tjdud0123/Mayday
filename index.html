@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MayDay</title>
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="mobile-web-app-capable" content="yes"> -->
+    <!--<link rel="icon" href="AA">!-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/topNham.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <link rel='stylesheet' href='./css/home.css'>
+</head>
+
+<body>
+    <audio src='One_day.mp3' autoplay='True' loop='true'></audio>
+    <div class="topContainer">
+        <img class='logo' src="./css/home_img/mayday_logo.png">
+        <img class='hamburger topRight' src="./css/hamburger_icon.png">
+    </div>
+    <div class="indexBox index">
+        <div class="light"><img src="./css/home_img/light.png"></div>
+
+        <div class="infoContainer ">
+            <div class="fade info" onclick="location.href='./myPage.html'">
+                <div class="job">
+                    의료계 2년차
+                </div>
+                <div class="name">
+                    stress_out님
+                </div>
+            </div>
+        </div>
+
+
+        <img class="ship fade fade3" src="css/home_img/back/night_ship.gif">
+
+
+        <div class="fade fade3 arrow"><img class='arrow1' src="./css/home_img/arrow1.png" alt=""></div>
+        <div class="fade fade3 arrow"><img class='arrow2' src="./css/home_img/arrow2.png" alt=""></div>
+        <div class="fade fade3 arrow"><img class='arrow3' src="./css/home_img/arrow3.png" alt=""></div>
+
+        <div class="fade fade3 alert">
+            <img class="alert_img" src="./css/home_img/alert.png" alt="">
+            <div class="num">51</div>
+        </div>
+
+        <div class="fade fade3 icon icon1" onclick="location.href='./toMe.html'">
+            <img class="circle_img" src="./css/home_img/msg_icon1.png" alt="">
+            <div class="func func1">나에게 온 답장</div>
+        </div>
+        <div class="fade fade3 icon icon2" onclick="location.href='./letterRead.html'">
+            <div class="func func2">편지 읽기</div>
+            <img class="circle_img" src="./css/home_img/msg_icon2.png" alt="">
+
+        </div>
+        <div class="fade fade3 icon icon3" onclick="location.href='./letterWrite.html'">
+            <div class="func func3">편지 쓰기</div>
+            <img class="circle_img" src="./css/home_img/msg_icon3.png" alt="">
+        </div>
+
+        <div class="downContainer">
+            <img class='down_arrow down' src="./css/home_img/down_arrow.png" alt="">
+        </div>
+    </div>
+
+
+    <div class="indexBox index2">
+        <div class="light"><img src="./css/home_img/light.png"></div>
+
+        <div class="infoContainer">
+            <div class="fade info" onclick="location.href='./myPage.html'">
+                <div class="job">
+                    의료계 2년차
+                </div>
+                <div class="name">
+                    stress_out님
+                </div>
+            </div>
+        </div>
+
+        <img class="fish" src="css/home_img/back/fish.gif">
+
+
+        <div class="fade2 person" onclick="location.href='./myPage.html'">
+            <img src="./css/home_img/person.png" alt="">
+        </div>
+
+
+        <div class="fade2 arrow"><img class='arrow4' src="./css/home_img/recommend_arrow.png" alt=""></div>
+        <div class="fade2 arrow"><img class='arrow5' src="./css/home_img/bookmark_arrow.png" alt=""></div>
+        <div class="fade2 arrow"><img class='arrow6' src="./css/home_img/write_arrow.png" alt=""></div>
+
+        <div class="fade2 icon icon4" onclick="location.href='./actHome.html'">
+            <img class="circle_img" src="./css/home_img/active_icon1.png" alt="">
+            <div class="func func1">활동추천</div>
+        </div>
+
+        <div class="fade2 icon icon5" onclick="location.href='./bookMark.html'">
+            <div class="func func3">북마크</div>
+            <img class="circle_img" src="./css/home_img/active_icon2.png" alt="">
+        </div>
+
+        <div class="fade2 icon icon6" onclick="location.href='./userWrite.html'">
+            <img class="circle_img" src="./css/home_img/active_icon3.png" alt="">
+            <div class="func func1">글 쓰기</div>
+        </div>
+
+        <div class="downContainer">
+            <img class='down_arrow up' src="./css/home_img/down_arrow.png" alt="">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    let date = new Date();
+    let hours = date.getHours();
+
+function setBackground(hours){
+    if (6 < hours && hours <= 10) {
+        $('.indexBox').css('background-image', 'url(./css/home_img/back/dawn1.png)')
+        $('.index2').css('background-image', 'url(./css/home_img/back/dawn2.png)')
+        $('.ship').attr("src", "./css/home_img/back/dawn_ship.gif")
+    } else if (10 < hours && hours <= 16) {
+        $('.indexBox').css('background-image', 'url(./css/home_img/back/day1.png)')
+        $('.index2').css('background-image', 'url(./css/home_img/back/day2.png)')
+        $('.ship').attr("src", "./css/home_img/back/day_ship.gif")
+    } else if (16 < hours && hours <= 24) {
+        $('.indexBox').css('background-image', 'url(./css/home_img/back/evening1.png)')
+        $('.index2').css('background-image', 'url(./css/home_img/back/evening2.png)')
+        $('.ship').attr("src", "./css/home_img/back/evening_ship.gif")
+    } else if (0 <= hours <= 6) {
+        $('.indexBox').css('background-image', 'url(./css/home_img/back/night1.png)')
+        $('.index2').css('background-image', 'url(./css/home_img/back/night2.png)')
+        $('.ship').attr("src", "./css/home_img/back/night_ship.gif")
+    }
+}
+
+setBackground(hours);
+    
+    setInterval(function () {
+        let date = new Date();
+        let hours = date.getHours();
+        console.log(hours);
+        setBackground(hours);
+    }, 6000);
+
+
+    $(document).ready(function () {
+
+        // popup없애놓기
+        $('.popContainer').hide();
+
+        //스크롤
+        let height = window.innerHeight;
+        console.log(height)
+        $('.down_arrow.down').click(function () {
+
+            console.log('밑으로')
+            $('html, body').animate({
+                scrollTop: height
+            }, 800, 'swing');
+
+            $('.fade3').css('animation', 'fadeOut ease-in 0.5s')
+            $('.fade2').css('animation', 'fadeIn ease-in 1s')
+            $('.person').css('animation', 'fadeIn 2s, swim 2s alternate infinite')
+            // return false;
+        });
+
+        $('.down_arrow.up').click(function () {
+
+            console.log('위로')
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800, 'swing');
+
+            $('.fade2').css('animation', 'fadeOut ease-in 0.5s')
+            $('.fade3').css('animation', 'fadeIn ease-in 1s')
+
+            // return false;
+        });
+
+        $('.indexBox').on('scroll touchmove mousewheel', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        });
+
+
+
+    });
+</script>

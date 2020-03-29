@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MayDay</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/letterReply.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 상단바 -->
+    <div class="topContainer center">
+        <div class="back"><img src="./css/white_back.png" alt="" class="back_arrow"></div>
+        <div class="title center">편지 읽기</div>
+        <div class="complete center">전송</div>
+    </div>
+
+    <!-- 카드 -->
+    <div class="card cardBack center" id="card_back">
+        <img src="./css/letterDetail/postcard_redshadow.png" alt="" class="cardImg">
+        <div class="textField">오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다오늘도 야근을했다
+            오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다</div>
+        <div class="letterDown">
+            <div class="downLeft center"><img class="emotion1" src="css/letter/emotion_img/angry.png"></div>
+            <div class="downRight center">2019.10.16</div>
+        </div>
+    </div>
+
+    <!-- 해시태그 -->
+    <div class="hashTag center">
+        <div class="centerBox center">
+            <img src="./css/letterDetail/reply_hashtag.png" alt="" class="hashImg">
+            <div class="hashText center blank">해시태그를 추가해서 답장하세요</div>
+        </div>
+    </div>
+
+    <!-- 답장 -->
+    <div class="reply center">
+        <img src="./css/letterDetail/reply_postcard.png" alt="" class="replyCard">
+        <textarea class="replyField"></textarea>
+        <div class="rePlyDown">
+            <div class="textNum"><span id="stateNum">0</span>/300</div>
+        </div>
+    </div>
+
+    <!-- 팝업 -->
+    <div class="popContainer popContainer3 center">
+        <div class="popConfirmBox">
+            <div class="popTitle center2" id="isSend">
+                <div>내용을 입력해주세요</div>
+            </div>
+            <div class="popButton2 center">
+                <div id="yes3" class="center">네</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popContainer popContainer2 center">
+        <div class="popChoiceBox">
+            <div class="popTitle2 center" id="inst">직종을 선택해 주세요</div>
+            <div class="popContent">
+                <div class="contentLine contentLine1">
+                    <div class="content">#저도 비슷한 일이 있었어요</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="content">#시간이 해결해 줄 거에요</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="content">#완벽하지 않아도 괜찮아요</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="content">#아프지 않은 날이 더 많을거에요</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="content">#내 감정에 솔직해지세요</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="content">#당신의 하루가 별보다 빛나길</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="content">#잘하고 있어요</div>
+                </div>
+                <div class="contentLine contentLine1">
+                    <div class="content">#지루한 일상에 지치지 말아요</div>
+                </div>
+            </div>
+            <div class="popButton2 center" id="yes2">확인</div>
+        </div>
+    </div>
+
+    <div class="popContainer popContainer1 center">
+        <div class="popConfirmBox">
+            <div class="popTitle center2" id="isSend">편지를 보낼까요?</div>
+            <div class="popButton center">
+                <div id="no1" class="center">아니요</div>
+                <div id="yes1" class="center">네</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 확인 창 -->
+    <div class="completeBox">
+        <div class="completeText">바다에 편지를 띄워 보냈어요</div>
+        <div class="aBox center">
+            <a href="./index.html">확인</a>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+<script>
+    setInterval(function () {
+        let viewheight = $(window).height();
+        let viewwidth = $(window).width();
+        let viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth +
+            "px, initial-scale=1.0");
+    }, 10);
+
+    $(window).resize(function () {
+        let viewheight = $(window).height();
+        let viewwidth = $(window).width();
+        let viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth +
+            "px, initial-scale=1.0")
+    });
+
+    $(document).ready(function () {
+
+        //뒤로가기
+        $('.back').on('click', function () {
+            console.log('뒤로가기')
+            $('.popContainer').hide();
+            history.back();
+        });
+
+        // popup없애놓기
+        $('.popContainer').hide();
+        $('.completeBox').hide();
+
+        //이모티콘박스 없애두기
+        $('.emoticonBox').hide();
+
+        // 글자수 제한
+        $('.replyField').on('keyup', function () {
+            console.log('sdsdsd')
+            stateNum = $(this).val().length
+            if (stateNum > 300) {
+                $(this).val($(this).val().substring(0, 300));
+            }
+            $('#stateNum').text(stateNum)
+        });
+
+        // 전송팝업
+        $('.complete').on('click', function () {
+            stateNum = $('.replyField').val().length
+            console.log('전송', stateNum)
+            if (stateNum == 0) {
+                console.log('0자')
+                $('.popContainer3').show();
+
+                $('#yes3').on('click', function () {
+                    $('.popContainer3').hide();
+                });
+
+            } else {
+                $('.popContainer1').show();
+
+                $('#no1').on('click', function () {
+                    $('.popContainer1').hide();
+                });
+                $('#yes1').on('click', function () {
+                    $('.popContainer1').hide();
+                    $('.completeBox').show();
+                });
+            }
+
+        });
+
+        //해시태그
+        $('.hashTag').on('click', function () {
+            console.log('pop')
+            $('.popContainer2').show();
+
+
+            $('.contentLine1').on('click', function () {
+
+                let isSelected = $(this).children(':first').hasClass("tagSelected")
+
+                if (!isSelected) {
+                    $('.content').removeClass('tagSelected')
+                    $(this).children(':first').addClass('tagSelected')
+                    tag = $(this).children(':last').text().substring(1)
+                    console.log(tag)
+                }
+
+                $('#yes2').on('click', function () {
+                    $('.popContainer2').hide();
+                    $('.hashText').text(tag);
+                    $('.hashText').css('color', '#0A74D8');
+                });
+            });
+        });
+
+    });
+</script>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>MayDay</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/topNham.css'>
+    <link rel='stylesheet' href='./css/bookMark.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/hamburger.js"></script>
+</head>
+
+<body>
+    <!-- 상단바 -->
+    <div class="topContainer center">
+        <div class="back"><img src="./css/back.png" alt="" class="back_arrow"></div>
+        <div class="title center">북마크</div>
+        <img class='hamburger topRight' src="./css/hamburger_blk.png">
+    </div>
+
+    <!-- 셀랙트 바 -->
+    <div class="selectContainer">
+        <div class="select center selected" id="editSelect">에디터 픽</div>
+        <div class="select center" id="userSelect">사용자 추천</div>
+    </div>
+    <!-- 리스트 -->
+
+    <div class="listContainer">
+        <!-- 에디터 픽 -->
+        <div class="list editorPick">
+            <div class="imgBox"></div>
+            <div class="contentBox">
+                <div class="condition">인간관계가 힘들 때</div>
+                <div class="contentTitle">오렌지 이즈 더 뉴 블랙(S07)</div>
+                <div class="theme">스트레스 풀리는 넷플릭스 5선</div>
+            </div>
+            <img class="markIcon" src="./css/actIcon/bookmark_aft.png">
+            <div class="clickBox clickBox1"></div>
+        </div>
+        <div class="list editorPick">
+            <div class="imgBox"></div>
+            <div class="contentBox">
+                <div class="condition">인간관계가 힘들 때</div>
+                <div class="contentTitle">오렌지 이즈 더 뉴 블랙(S07)</div>
+                <div class="theme">스트레스 풀리는 넷플릭스 5선</div>
+            </div>
+            <img class="markIcon" src="./css/actIcon/bookmark_aft.png">
+            <div class="clickBox clickBox1"></div>
+        </div>
+        <!-- 사용자 픽 -->
+        <div class="list userPick">
+            <div class="imgBox2"></div>
+            <div class="contentBox2">
+                <div class="condition">인간관계가 힘들 때</div>
+                <div class="contentTitle2">절대 잠 안오는 커피 만들기</div>
+                <div class="infoContents"><img class="animalIcon" src="./css/myPage_img/gaori.png">@<span id="id">yageun</span></div>
+            </div>
+            <img class="markIcon" src="./css/actIcon/bookmark_aft.png">
+            <div class="clickBox clickBox2"></div>
+        </div>
+        <div class="list userPick">
+                <div class="imgBox2"></div>
+                <div class="contentBox2">
+                    <div class="condition">인간관계가 힘들 때</div>
+                    <div class="contentTitle2">절대 잠 안오는 커피 만들기</div>
+                    <div class="infoContents"><img class="animalIcon" src="./css/myPage_img/gaori.png">@<span id="id">yageun</span></div>
+                </div>
+                <img class="markIcon" src="./css/actIcon/bookmark_aft.png">
+                <div class="clickBox clickBox2"></div>
+            </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        //프런트적 동작
+        $('.userPick').hide()
+        $('.select').on('click', function () {
+            $('.select').toggleClass('selected')
+
+            //가상동작
+            if($('#editSelect').hasClass('selected')){
+                $('.userPick').hide()
+                $('.editorPick').show()
+            }
+            else{
+                $('.editorPick').hide()
+                $('.userPick').show()
+            }
+        });
+
+        //페이지 이동{
+            $('.clickBox1').on('click', function () {
+                location.href ="./editorDetail.html"
+            });
+
+            $('.clickBox2').on('click', function () {
+                location.href ="./userActDt.html"
+            });
+
+    });
+</script>

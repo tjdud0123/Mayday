@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>MayDay</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/topNham.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <link rel='stylesheet' href='./css/toMe.css'>
+</head>
+
+<body>
+    <!-- 상단바 -->
+    <div class="topContainer center">
+        <div class="back"><img src="./css/back.png" alt="" class="back_arrow"></div>
+        <div class="title center">내가 쓴 답장</div>
+        <img class='hamburger topRight' src="./css/hamburger_blk.png">
+    </div>
+
+    <!-- 리스트 -->
+
+    <div class="listContainer">
+        <div class="list">
+            <div class="listTitle2">2019.07.19.화</div>
+            <div class="listContent1">저도 비슷한 일이 있었어요, 저도 비슷한 일이 있었어요,저도 비슷한 일이 있었어요, 저도 비슷한 일이 있었어요</div>
+            <div class="listContent2">오늘도 일이 많아 야근을 했다.오늘도 일이 많아 야근을 했다.오늘도 일이 많아 야근을 했다.오늘도 일이 많아 야근을 했다.</div>
+        </div>
+        <div class="list center">
+            <div class="listTitle2">2019.07.19.화</div>
+            <div class="listContent1">저도 비슷한 일이 있었어요, 저도 비슷한 일이 있었어요,저도 비슷한 일이 있었어요, 저도 비슷한 일이 있었어요</div>
+            <div class="listContent2">오늘도 일이 많아 야근을 했다.오늘도 일이 많아 야근을 했다.오늘도 일이 많아 야근을 했다.오늘도 일이 많아 야근을 했다.</div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('.popContainer').hide();
+
+
+        // 글자수 제한
+        if ($('.listContent1').text().length > 25) {
+            $('.listContent1').text($('.listContent1').text().substring(0, 25) + '...');
+        }
+
+        if ($('.listContent2').text().length > 29) {
+            $('.listContent2').text($('.listContent2').text().substring(0, 29) + '...');
+        }
+
+        //페이지 이동
+        $('.list').on('click', function () {
+            location.href = "./fromMeDetail.html"
+        });
+
+    });
+</script>

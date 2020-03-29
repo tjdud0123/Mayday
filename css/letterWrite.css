@@ -1,0 +1,333 @@
+/* 글씨체 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-image: url(./letter/letter_back.png);
+    background-size: 100vw 100vh;
+    background-position: top left;
+    font-family: 'NanumSquare';
+}
+/* top bar */
+.topContainer {
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 14.04vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    z-index:2;
+}
+
+.back {
+    position: absolute;
+    left: 0;
+}
+
+.back_arrow {
+    width: 15.47vw;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.complete {
+    font-weight: 700;
+    width: 15.47vw;
+    height: 4.43vh;
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+}
+
+/* letter */
+
+.letter{
+    margin-top:14.04vh;
+    height: 42.33vh;
+    position: relative;
+    perspective: 600px;
+    transition : 2s;
+}
+
+.card{
+    width: 91.46vw;
+    position: absolute;
+    -webkit-perspective: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: rotateY(0deg);
+    backface-visibility: hidden;
+    transition : 2s;
+    -moz-transition: 2s;
+    -o-transition: 2s;
+    -webkit-transition: 2s;
+    -ms-transition: 2s;
+}
+
+.cardImg{
+    width: 91.46vw;
+    height: 42.33vh;
+}
+
+.cardFront{
+    -webkit-transform: rotateY(0deg);
+    transform:rotateY(0deg);
+}
+.cardBack{
+    -webkit-transform: rotateY(180deg);
+    transform:rotateY(180deg);
+}
+
+.instruction{
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.frontText{
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 5.79vh;
+    position: absolute;
+    top:16.63vh;
+    left:25.87vw;
+}
+
+.frontText1{
+    top:17.2vh;
+    left:25.87vw;
+}
+
+.frontText2{
+    top:27vh;
+    left:25.87vw;
+}
+
+.upText{
+    padding-bottom: 1.72vh;
+}
+
+/*카드 뒷면*/
+.textNum{
+    position: absolute;
+    top:2.66vh;
+    right:6.67vw;
+    font-weight: 200;
+    font-size: 12px;
+}
+
+#writeText{
+    line-height: 4.29vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    left:6.13vw;
+    top:4.29vh;
+    height: 30.06vh;
+    width: 79vw;
+    overflow: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border:none;
+    box-sizing: border-box;
+    padding-left:3vw;
+    font-family: 'NanumSquare';
+    font-size: 14px;
+    font-weight: 400;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+textarea::placeholder {
+    color: #A4A4A4;
+}
+
+.letterDown{
+    position: absolute;
+    bottom:3.83vh;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 12px;
+    width: 79vw;
+    align-items: center;
+}
+img.emotion1{
+    height: 3.19vh;
+    margin-right: 4.8vw;;
+}
+img.emotion2{
+    height: 3.19vh;
+    margin-right: 1.07;
+}
+
+.downRight{
+    padding-right: 3vh;
+}
+
+/*팝업 화면*/
+.popContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+.popConfirmBox{
+    background-color: white;
+    position: relative;
+    width: 91.47vw;
+    border-radius: 10px;
+    z-index: 3;
+    opacity: 1;
+    height: 24.63vh;
+}
+
+
+.popButton{
+    color:white;
+    background-color: white;
+    height: 7.39vh;
+    border-top: 1px solid  #0A74D8;
+    border-radius: 0 0 10px 10px;
+}
+
+.popTitle{
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    font-size: 18px;
+    border-bottom:2px solid #F7F7F7;
+    height:17.73vh;
+}
+
+#no1, #no2{
+    color: #0A74D8;
+    width: 50%;
+    height: 100%;
+}
+
+#yes1, #yes2{
+    color:white;
+    width: 50%;
+    height: 100%;
+    background-color:#0A74D8;
+    border-radius: 0 0 10px 0;
+}
+
+/*확인 창*/
+.completeBox{
+    display: none;
+    color:white;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./letter/send_back.png);
+    background-size: 100vw 100vh;
+    background-position: center center;
+    z-index: 5;
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.completeText{
+    padding:74.47vh 0 6.53vh 0;
+    font-size: 18px;
+}
+.aBox{
+    width: 25.33vw;
+    height: 6.4vh;
+}
+a, a:visited{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.center2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 150%;
+}
+
+/* 이모티콘 박스 */
+
+
+.emoticonBox{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding:1vh 3vw 0 3vw;
+    justify-content: space-between;
+    width: 86.4vw;
+    box-sizing: border-box;
+    margin:0 6.8vw;
+    margin-top:-1.7vh;
+}
+
+img.emotext{
+    height: 8vh;
+}
+
+.emBox{ 
+   /* visibility: hidden; */
+    position: absolute;
+    bottom:3.83vh;
+    left:6vw;
+    display: flex;
+    align-items: center;
+    
+}
+
+.emOn{
+    /* position: fixed; */
+    /* top: 48.3vh;  */
+    margin-right: 5px;
+    height: 3.2vh;
+    display: none;
+    /* z-index:1; */
+}
+
+#yes3{
+    background-color: #0A74D8;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+}
+
+input.trick{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 7vh;
+    background-color: rgba(0,0,0,0);
+    z-index: 1;
+    border: none;
+    outline: none;
+}

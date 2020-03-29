@@ -1,0 +1,99 @@
+.photoBox{
+    margin-top: 14.04vh;
+    width: 100vw;
+    height: 35.22vh;
+    background-image: url(./activity/editor4.png);
+    background-position: center;
+    background-size:100%;
+    background-repeat:no-repeat;
+}
+
+/* 상단정보 */
+.Info{
+    position: relative;
+    padding: 0 4.27vw;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.upInfo{
+    padding-top: 2.46vh;
+    padding-bottom: 4.06vh;
+    font-weight: 700;
+}
+.bkMarkBox{
+    position: absolute;
+    right: 4.27vw;
+    top:3.94vh;
+    display: flex;
+    align-items: center;
+    
+}
+
+.markIcon{
+    width: 40px;
+}
+
+.markNum{
+    color:#0a74d8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.condition{
+    color:#0a74d8;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.title0{
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.shortDetail{
+    color:#8a8a8a;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.detailBox{
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.dtCategory{
+    color:#8a8a8a;
+    font-size: 12px;
+}
+
+.dtItem{
+    font-weight: 400;
+    font-size: 12px;
+    position: absolute;
+    left:19.73vw;
+    color:#8a8a8a;
+}
+
+/* 하단정보 */
+.downInfo{
+    padding-top: 4.06vh;
+    border-top: 2px solid #f7f7f7;
+    position: relative;
+    display: flex;
+}
+
+.dtCategory2{
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.longDetail{
+    font-weight: 400;
+    font-size: 12px;
+    position: absolute;
+    left:19.73vw;
+    width: 69.87vw;
+    line-height: 150%;
+    color:#8a8a8a;
+}

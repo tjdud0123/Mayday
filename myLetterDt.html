@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>MayDay</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel='stylesheet' href='./css/topNham.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <link rel='stylesheet' href='./css/repleDetail.css'>
+</head>
+
+<body>
+    <!-- 상단바 -->
+    <div class="topContainer center">
+        <div class="back"><img src="./css/back.png" alt="" class="back_arrow"></div>
+        <div class="title center">내 편지</div>
+        <img class='hamburger topRight' src="./css/hamburger_blk.png">
+    </div>
+
+     <!-- 카드 -->
+     <div class="card cardBack center" id="card_back">
+        <img src="./css/letterDetail/postcard_redshadow.png" alt="" class="cardImg">
+        <div class="textField">오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다 오늘도 야근을했다</div>
+        <div class="letterDown">
+            <div class="downLeft center"><img class="emotion1" src="css/letter/emotion_img/angry.png"></div>
+            <div class="downRight center">2019.10.16</div>
+        </div>
+    </div>
+
+     <!-- 해시태그 -->
+     <div class="hashTag center">
+        <div class="centerBox">
+            <img src="./css/letterDetail/reply_hashtag.png" alt="" class="hashImg hashImg2">
+            <div class="hashText center">저도 비슷한 일이 있었어요 </div>
+        </div>
+    </div>
+
+    <!-- 답장 -->
+    <div class="reply2">
+        <div class="cardItem">
+            <img src="./css/letterDetail/reply_postcard.png" alt="" class="replyCard2">
+            <div class="replyField2">저도 비슷한 일이 있었어요 저도 비슷한 일이 있었어요 저도 비슷한 일이 있었어요</div>
+            <div class="rePlyDown2">
+                <div class="likeBox center"><img class="like" src="css/letterDetail/reply_give_heart_bf.png">하트를 눌러 고마움을 표현해보세요.</div>
+            </div>
+        </div>
+
+        <div class="cardItem">
+            <img src="./css/letterDetail/reply_postcard.png" alt="" class="replyCard2">
+            <div class="replyField2">저도 비슷한 일이 있었어요 저도 비슷한 일이 있었어요 저도 비슷한 일이 있었어요</div>
+            <div class="rePlyDown2">
+                <div class="likeBox center liked"><img class="like" src="css/letterDetail/reply_give_heart_af.png">고마움을 표현했습니다.</div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+<script>
+    $(document).ready(function () {
+      
+
+        //하트
+        $('.like').on('click', function () {
+            $(this).toggleClass('liked')
+            console.log(this)
+            if ($(this).hasClass('liked')) {
+                console.log('yes')
+                $(this).attr("src", 'css/letterDetail/reply_give_heart_af.png');
+    
+            }
+            else {
+                console.log('no')
+                $(this).attr("src", 'css/letterDetail/reply_give_heart_bf.png');
+              
+            }
+        });
+    });
+</script>

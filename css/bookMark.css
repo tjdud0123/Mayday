@@ -1,0 +1,223 @@
+/* 글씨체 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+body{
+    font-family: 'NanumSquare';
+}
+
+/* 리스트 */
+
+.selectContainer{
+    margin-top: 14.04vh;
+    height: 7vh;
+    box-sizing: border-box;
+    border-top: 2px solid #F7F7F7;
+    display: flex;
+    width: 100vw;
+    z-index: 2;
+}
+
+.listContainer{
+    height:80.17vh;
+    overflow: auto;
+}
+
+.select{
+    width: 50vw;
+    font-weight: 400;
+    color:#c4c4c4;
+    border-bottom: 2px solid #F4F4F4;
+}
+
+.selected{
+    font-weight: 700;
+    color:#0474D8;
+    border-bottom: 2px solid #0474D8;
+}
+
+.list{
+    position: relative;
+    border-bottom: 2px solid #F7F7F7;
+    width: 100vw;
+    height:16.5vh;
+    box-sizing: border-box;
+    padding-left: 4.26vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* 에디터 픽 */
+.imgBox{
+    width: 27.2vw;
+    height: 12.56vh;
+    background-image: url(./activity/editor4.png);
+    background-position: center;
+    background-size: 40vw;
+    border-radius: 10px;
+}
+
+.contentBox{
+    height:16.5vh;
+    width: 68.54vw;
+    box-sizing: border-box;
+    padding-left: 5.33vw;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4.43vh;
+    justify-content: flex-start;
+}
+
+.condition{
+    font-weight: 700;
+    font-size: 10px;
+    color:#0474D8;
+    margin-bottom: 2.09vh;
+}
+
+.contentTitle{
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 1vh;
+}
+
+.theme{
+    font-weight: 700;
+    font-size: 12px;
+    color:#8A8A8A;
+}
+
+.markIcon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:1.72vh;
+    right: 1.07vw;
+}
+
+/* 사용자 픽 */
+.imgBox2{
+    width: 27.2vw;
+    height: 12.56vh;
+    background-image: url(./activity/userpick3.png);
+    background-position: center;
+    background-size: 40vw;
+    border-radius: 10px;
+}
+
+.contentBox2{
+    height:16.5vh;
+    width: 68.54vw;
+    box-sizing: border-box;
+    padding-left: 5.33vw;
+    padding-top: 4.43vh;
+}
+
+.animalIcon{
+    width: 8.33vw;
+    margin-left: -1vw;
+}
+
+.infoContents{
+    display: flex;
+    align-items: center;
+    color:#c4c4c4;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.contentTitle2{
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 1.37vh;
+}
+
+/* 내 활동 추천 */
+.listContainer2{
+    margin-top: 14.04vh;
+    height:85.96vh;
+    overflow: auto;
+}
+
+.firstList{
+    border-top: 2px solid #F7F7F7;
+}
+
+.contentTitle3{
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 2.71vh;
+}
+
+/* 사용자 픽 */
+.headContainer{
+    margin-top: 14.04vh;
+    height: 14.9vh;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    z-index: 2;
+    background-image: url(./activity/editor1.png);
+    background-position: center center;
+    background-size: 110%;
+    color:white;
+    font-weight: 700;
+}
+
+.listContainer3{
+    overflow: auto;
+}
+
+.conTitle{
+    font-size:10px;
+    margin-bottom: 1vh;
+}
+
+.aTitle{
+    margin-bottom: 1vh;
+}
+
+.nTitle{
+    font-size:18px;
+}
+
+.listContainer{
+    height:80.17vh;
+    overflow: auto;
+}
+
+.shortDetail{
+    font-size:14px;
+    padding-top: 0.35vh;
+    color:#8a8a8a;
+}
+
+.longDetail{
+    margin-top: 1.35vh;
+    padding-right:4vw;
+    font-size: 12px;
+    color:#8a8a8a;
+    line-height: 120%;
+}
+
+/*picklist2*/
+.contentBox3{
+    height:16.5vh;
+    width: 68.54vw;
+    padding-left: 5.33vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.clickBox{
+    height:16.5vh;
+    width: 80vw;
+    position: absolute;
+    top:0;
+}

@@ -1,0 +1,220 @@
+/* 글씨체 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+body{
+    font-family: 'NanumSquare';
+}
+/* top bar */
+.topContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 14.04vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.back {
+    position: absolute;
+    left: 0;
+}
+
+.back>img {
+    width: 15.47vw;
+}
+
+.title {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    color: black;
+    font-size: 18px;
+}
+
+img.hamburger{
+    height:4.43vh;
+    right:0;
+    position: absolute;
+}
+
+/* 카드 */
+
+.card{
+    position: relative;
+    margin-top:14.04vh;
+    width: 100vw;
+    height: 42.33vh;
+}
+
+.cardImg{
+    width: 91.46vw;
+    height: 42.33vh;
+}
+
+.letterDown{
+    position: absolute;
+
+}
+
+.textField{
+    width: 75.46vw;
+    height: 27.83vh;
+    position: absolute;
+    line-height: 4.1vh;
+    top: 5.5vh;
+    font-size:14px;
+    box-sizing: border-box;
+    /* margin-bottom:6.2vh; */
+    overflow: auto;
+}
+
+.hashImg{
+    width: 91.46vw;
+    /* position: absolute;
+    top:0; */
+}
+
+.hashImg2{
+    width: 85.06vw;
+    /* position: absolute;
+    top:0;
+    left: 0; */
+}
+
+.centerBox{
+    /* margin-top: 2.8vh;
+    margin-bottom: 1vh; */
+    width: 91.46vw;
+    height: 5.4vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hashText{
+    color:#0A74D8;
+    font-weight: 700;
+    font-size: 14px;
+    z-index: 2;
+    position: absolute;
+    left:20vw;
+}
+
+.letterDown{
+    position: absolute;
+    bottom:3.83vh;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 12px;
+    width: 75.46vw;
+    align-items: center;
+}
+img.emotion1{
+    height: 3.19vh;
+    margin-right: 4.8vw;;
+}
+img.emotion2{
+    height: 3.19vh;
+    margin-right: 1.07;
+}
+
+.downRight{
+    color: #a4a4a4;
+    font-size: 12px;
+}
+
+/* 답장 */
+
+.reply{
+    position: relative;
+    margin-top: 1vh;
+}
+
+.reply2{
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: 4vw;
+    overflow-wrap: normal;
+    margin-top: 1vh;
+}
+
+.replyCard{
+    width: 91.46vw; 
+    height: 27.46vh;  
+}
+
+.replyCard2{
+    width: 85.06vw; 
+    height: 27.46vh;  
+}
+
+.replyField{
+    position: absolute;
+    width: 77.2vw;
+    height: 15vh;
+    overflow: auto;
+    font-size: 14px;
+    line-height: 4.7vh;
+    top:2.7vh;
+}
+
+.replyField2{
+    white-space: normal;
+    overflow-y: auto;
+    position: absolute;
+    width: 73.2vw;
+    height: 16vh;
+    font-size: 14px;
+    line-height: 4.7vh;
+    top:2.7vh;
+    left:7vw;
+}
+
+.cardItem{
+    position: relative;
+    width: 85.06vw;
+    display: inline-block;
+}
+
+
+.rePlyDown{
+    position: absolute;
+    bottom:4vh;
+    left:9.07vw;
+}
+
+.rePlyDown2{
+    position: absolute;
+    bottom:4vh;
+    left:6.07vw;
+}
+
+.likeBox{
+    font-size: 14px;
+    color:#0A74D8;
+}
+
+.like{
+    width: 3.07vh;
+    margin-right: 2vw;
+}
+/*--------------*/
+
+/* 해시태그 */
+
+/* 답장2 */
